@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainPage.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="JS/swiper-bundle.min.js"></script>
+
+    <title>Cửa hàng café Nostalgia</title>
+    <link rel="canonical" href="https://nostalgia.vn/">
+</head>
+
+<body>
+
+    <!----------------------------Thanh Header---------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div id="menu">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><img src="images/vietnam_icon.png" class="vn-icon"> VIETNAMESE(VN) <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VIETNAMESE(VN)</a>
+                                        <a href="#">ENGLISH(ENG)</a>
+                                        <a href="#">JAPANESE(JP)</a>
+                                        <a href="#">CHINESE(CN)</a>
+                                    </div>
+                                </li>
+                
+                                <li class="dropdown">
+                                    <a href="#"> VND <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VND - Vietnam Dong</a>
+                                        <a href="#">EUR – Euro</a>
+                                        <a href="#">JPY - Japanese Yen</a>
+                                        <a href="#">CNY - Chinese Yuan</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div id="sec-menu">
+                            <ul>
+                                <li><a href="#">ĐĂNG KÝ</a></li>
+                                <li><a href="#">ĐĂNG NHẬP</a></li>
+                                <li><a href="#">GIỎ HÀNG</a></li>
+                                <li><a href="#">THANH TOÁN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------Thanh Site---------------------------->
+    <div class="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="images/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF">Cart</span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Ethiopia.png" alt="Ethiopia">
+                <div class="content">
+                    <h3><b>Café Ethiopia by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">599.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/DeCaf.jpg" alt="DeCaf">
+                <div class="content">
+                    <h3><b>Café DeCaf by Nos®</b></h3>
+                    <div class="qty">Số lượng: 02</div>
+                    <div class="price">1.799.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Rose.jpg" alt="Rose">
+                <div class="content">
+                    <h3><b>Café Rosé by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">399.000₫</div>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <span><b>Tổng:</b></span>
+                <span class="t-price">2.797.000₫</span>
+            </div>
+
+            <div class="total-prices">
+                <span><b>Chiết khấu:</b></span>
+                <span class="t-price">2.500.000₫</span>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-shopping-cart"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-cash-register"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="shopping-cart.js"></script>
+
+
+    <!----------------------------Thanh select---------------------------->
+    <div id="select">
+        <nav>
+            <ul class="menus">
+                <li class="first-li">
+                    <a href="#" class="catalog" style="color: #FFFFFF; height: 55px">
+                        <i class="fas fa-bars"></i> &emsp; CATALOG
+                    </a>
+
+                    <ul class="first-li-submenu">
+                        <li><a href="#" title="Nguồn cung"><span>Nguồn cung</span></a></li>
+                        <li><a href="#" title="Trách nhiệm"><span>Trách nhiệm</span></a></li>
+                        <li><a href="#" title="Trách nhiệm"><span>Tìm loại café hoàn hảo của bạn</span></a></li>
+                    </ul>
+                </li>
+                <script src="catalog.js"></script>
+                
+                <li>
+                    <a href="#" class="home">TRANG CHỦ</a>
+                </li>
+
+                <li class="select-dropdown">
+                    <a href="#" class="products" style="height: 55px">SẢN PHẨM </a>
+
+                    <ul class="submenu">
+                        <li><a href="#" title="Café nguyên hạt">Café nguyên hạt</a></li>
+                        <li><a href="#" title="Espresso">Espresso</a></li>
+                        <li>
+                            <a href="#" title="Bánh">Bánh <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+
+                            <ul class="sub-submenu">
+                                <li><a href="#" title="Muffin">Bánh Muffin</a></li>
+                                <li><a href="#" title="Cookie">Bánh Cookie</a></li>
+                                <li><a href="#" title="Sandwiches">Bánh Sandwiches</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" title="Chocolate">Chocolate</a></li>
+
+                        <li>
+                            <a href="#" title="Frappuchino">Frappuchino® <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                            
+                            <ul class="sub-submenu">
+                                <li><a href="#" title="Frappuchino Xay" style="width: 210px">Café Xay Frappuchino®</a></li>
+                                <li><a href="#" title="Frappuchino Trộn" style="width: 210px">Kem Trộn Frappuchino®</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" title="Matcha">Matcha</a></li>
+                        <li><a href="#" title="Trà">Trà pha</a></li>
+                        <li><a href="#" title="Cacao">Cacao</a></li>
+                        <li>
+                            <a href="#" title="Item Collection">Phụ kiện<i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                            
+                            <ul class="sub-submenu">
+                                <li><a href="#" title="Bình Nước Nos">Bình Nước Nos®</a></li>
+                                <li><a href="#" title="Túi Xách Nos">Túi Xách Nos®</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="blog">BLOG</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="about">VỀ NOSTALGIA®</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="contact">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!----------------------------Thanh banner---------------------------->
+    <div id="banner">
+        <div class="box-left">
+            <h2>
+                <span>NOSTALGIA</span>
+                <br>
+                <span>ANTIQUE SHOP</span>
+            </h2>
+
+            <p>Ở đây chúng tôi cung cấp những món đồ giúp bạn hoài niệm lại về một thời quá khứ huy hoàng của những hiện vật đã có bề dày lịch sử lâu năm</p>
+            <button>XEM CHI TIẾT Ở ĐÂY</button>
+        </div>
+    </div>
+</body>
+</html>
