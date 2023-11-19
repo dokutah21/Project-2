@@ -6,18 +6,25 @@
     <link rel="stylesheet" href="MainPage.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="JS/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Cửa hàng café Nostalgia</title>
     <link rel="canonical" href="https://nostalgia.vn/">
 </head>
 
 <body>
+    <!----------------------------Loader---------------------------->
+    <div class="load" id="load">
+        <img src="images/logo.png" alt="#" class="load-img">
+    </div>
+    <script src="loader.js"></script>
 
     <!----------------------------Thanh Header---------------------------->
     <header>
@@ -67,7 +74,7 @@
 
 
     <!----------------------------Thanh Site---------------------------->
-    <div class="site">
+    <div id="site">
         <table>
             <tr>
                 <td class="logos" >
@@ -96,6 +103,8 @@
             </tr>
         </table>
     </div>
+
+    <script src="sticky-site.js"></script>
 
     <div class="overlay" id="overlay"></div>
     
@@ -167,9 +176,13 @@
                     </a>
 
                     <ul class="first-li-submenu">
-                        <li><a href="#" title="Nguồn cung"><span>Nguồn cung</span></a></li>
+                        <li><a href="#" title="Nguồn cung"><span>Nguồn cung của những hạt café</span></a></li>
                         <li><a href="#" title="Trách nhiệm"><span>Trách nhiệm</span></a></li>
-                        <li><a href="#" title="Trách nhiệm"><span>Tìm loại café hoàn hảo của bạn</span></a></li>
+                        <li><a href="#" title="Tìm loại café hoàn hảo"><span>Tìm loại café hoàn hảo của bạn</span></a></li>
+                        <li><a href="#" title="Chi nhánh"><span>Chi nhánh của chúng tôi</span></a></li>
+                        <li><a href="#" title="Hội viên"><span>Hội viên Nos</span></a></li>
+                        <li><a href="#" title="Công thức"><span>Công thức của Nos</span></a></li>
+                        <li><a href="#" title="Di sản"><span>Di sản</span></a></li>
                     </ul>
                 </li>
                 <script src="catalog.js"></script>
@@ -208,14 +221,7 @@
                         <li><a href="#" title="Matcha">Matcha</a></li>
                         <li><a href="#" title="Trà">Trà pha</a></li>
                         <li><a href="#" title="Cacao">Cacao</a></li>
-                        <li>
-                            <a href="#" title="Item Collection">Phụ kiện<i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
-                            
-                            <ul class="sub-submenu">
-                                <li><a href="#" title="Bình Nước Nos">Bình Nước Nos®</a></li>
-                                <li><a href="#" title="Túi Xách Nos">Túi Xách Nos®</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#" title="Item Collection">Phụ kiện</a></li>
                     </ul>
                 </li>
 
@@ -235,17 +241,195 @@
     </div>
 
     <!----------------------------Thanh banner---------------------------->
-    <div id="banner">
-        <div class="box-left">
-            <h2>
-                <span>NOSTALGIA</span>
-                <br>
-                <span>ANTIQUE SHOP</span>
-            </h2>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
 
-            <p>Ở đây chúng tôi cung cấp những món đồ giúp bạn hoài niệm lại về một thời quá khứ huy hoàng của những hiện vật đã có bề dày lịch sử lâu năm</p>
-            <button>XEM CHI TIẾT Ở ĐÂY</button>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/coffee.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+              <h3>Coffee Beans</h3>
+              <p>Hương thơm của những hạt café được lựa chọn kĩ lưỡng</p>
+            </div>   
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/typing_and_writing.gif" alt="Chicago">
+            <div class="carousel-caption">
+              <h3>Make from NOS</h3>
+              <p>Tất cả những công thức, tạo nên từ Nos</p>
+            </div>   
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/coffee-gifs.gif" alt="New York">
+            <div class="carousel-caption">
+              <h3>Kết quả</h3>
+              <p>Mọi thứ chính là thành quả và di sản</p>
+            </div>   
+          </div>
         </div>
     </div>
+
+    <!----------------------------Giới thiệu về Nostalgia---------------------------->
+    <div id="nos-introduce">
+        <div class="nos-intro">
+            <h3>ABOUT NOSTALGIA</h3><hr>
+
+            <blockquote>
+                <P>Nostalgia - Thế giới hương vị và ký ức, là nơi bạn có thể tìm thấy những chút ngọt ngào của quá khứ kết hợp với hương vị cà phê thơm ngon. Chúng tôi là điểm đến tuyệt vời cho những người yêu thích vẻ đẹp của những khoảnh khắc đáng nhớ và thực sự đặc biệt.</P>
+
+                <P>Tại Nostalgia, chúng tôi không chỉ phục vụ cà phê, mà chúng tôi còn mang đến cho bạn trải nghiệm đầy thú vị. Chúng tôi tự hào về việc chọn lựa cẩn thận các hạt cà phê, rang xay một cách kỹ lưỡng để tạo ra mỗi ly cà phê độc đáo và ngon miệng. Chúng tôi cũng cung cấp nhiều loại đồ uống khác, từ trà thảo mộc đến cocktail cà phê độc đáo, để mang đến cho bạn trải nghiệm thú vị và thỏa mãn vị giác.</P><br>
+                
+                <p style="font-size: 14px;"><i> ___ dir. Nguyễn Huyền</i></p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!----------------------------World of Coffee---------------------------->
+    <div id="WoC">
+        <div class="WoC-design">
+            <h3>Tam đề: Nghệ nhân, Café và Tôi</h3>
+            <p><i>"Dù có phải xới tung trái đất này lên cũng phải làm để tạo ra những tuyệt phẩm cà phê năng lượng ngon nhất thế giới!"</i></p>
+            <button class="WoC-btn"><span>tìm hiểu thêm</span></button>
+                
+            <video src="videos/beans.mp4" muted autoplay loop></video>
+        </div>
+    </div>
+
+    <!----------------------------Speciality---------------------------->
+    <div class="speciality section containerse" id="speciality">
+        <div class="speciality-container">
+            <div class="speciality-box">
+                <h2 class="section-title">
+                    Những hạt cà phê đặc biệt giúp bạn phấn chấn hơn theo từng ngày!
+                </h2>
+            </div>
+
+            <div class="blank-space" style="width: 220px;"></div>
+
+            <div>
+                <a href="#" class="speciality-btn speciality-button">Xem thêm</a>
+            </div>
+        </div>
+
+        <div class="speciality-category">
+            <div class="speciality-group">
+                <img src="images/speciality_1.png" alt="" class="speciality-img">
+                <h3 class="speciality-title" style="color: #AE8F1F; font-weight: 600; text-transform: uppercase;">Lựa chọn</h3>
+                <p class="speciality-description">
+                    Chúng tôi lựa chọn café tinh túy nhất, tất cả vì một hương vị của sự đẳng cấp
+                </p>
+            </div>
+
+            <div class="speciality-group">
+                <img src="images/speciality_2.png" alt="" class="speciality-img">
+                <h3 class="speciality-title" style="color: #AE8F1F; font-weight: 600; text-transform: uppercase;">Đi kèm</h3>
+                <p class="speciality-description">
+                    Hãy thưởng thức café của bạn với những món ăn của chúng tôi
+                </p>
+            </div>
+    
+            <div class="speciality-group">
+                <img src="images/speciality_3.png" alt="" class="speciality-img">
+                <h3 class="speciality-title" style="color: #AE8F1F; font-weight: 600; text-transform: uppercase;">Thưởng thức</h3>
+                <p class="speciality-description">
+                    Thưởng thức hương café tinh hoa tới từ khắp mọi nơi trên thế giới
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Tabs Product---------------------------->
+    <div id="bottom">
+        <div class="bottom-tabs">
+            <div id="product-selling">
+                <h2><span style="color: #AE8F1F;">SẢN PHẨM</span> CỦA CHÚNG TÔI</h2>
+
+                <p>Sản phẩm của chúng tôi mang đến trải nghiệm cafe độc đáo, hòa quyện hương thơm đặc trưng và không gian ấm áp. Mỗi giọt cà phê là một hành trình mới đầy thú vị.</p>
+
+                <div class="tabs">
+                    <div class="tab-item active">NEW PRODUCT</div>
+        
+                    <div class="tab-item">BEST SELLER</div>
+        
+                    <div class="tab-item">HOT DEALS</div>
+        
+                    <div class="tab-item">FLASH SALE</div>
+                    
+                    <div class="line"></div>
+                </div>
+            </div>
+          
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div class="post-intro">
+                        <h2 style="margin-left: 140px; margin-bottom: 20px; font-size: 20px">NEW PRODUCT</h2>
+                        <h2>SẢN PHẨM MỚI CỦA NOSTALGIA</h2>
+    
+                        <button>KHÁM PHÁ</button>
+                    </div>
+
+                    <div class="item-product-sell">
+                        <div class="item-product-sell-row">
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/ethiopian.png" alt="Ethiopia">
+                                    <img class="top-psr" src="images/Ethiopia.png">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Café nguyên hạt</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café Ethiopia: Hạt nguyên chất</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa"><a href="#myModal"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1200px;">
+                                      <span class="close">&times;</span>
+                                      <p>Some text in the Modal..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="modal.js"></script>
+
+                            <!-- <div class="col-sm-3" style="left: 10%">
+                                <img class="psr" src="images/since.png" alt="since">
+                            </div>
+
+                            <div class="col-sm-3" style="left: 20%">
+                                <img class="psr" src="images/since.png" alt="since">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane">
+                    <h2>Angular</h2>
+                    <p>Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.</p>
+                </div>
+
+                <div class="tab-pane">
+                    <h2>Ember</h2>
+                    <p>Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</p>
+                </div>
+
+                <div class="tab-pane">
+                    <h2>Vue.js</h2>
+                    <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="tabs.js"></script>
 </body>
 </html>

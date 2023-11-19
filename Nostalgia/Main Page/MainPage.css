@@ -1,6 +1,6 @@
 /*===================Google Fonts===================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+ */
 
 /*===================Reset Website===================*/
 * 
@@ -16,18 +16,53 @@
 
 img{width: 100%}
 
+/*===================Loader===================*/
+.load
+{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 99%);
+    display: grid;
+    place-items: center;
+    z-index: 1999;
+}
+
+.load-img{
+    width: 250px;
+    height: 250px;
+    animation: animation 3s infinite linear;
+}
+
+@keyframes animation
+{
+    0%
+    {
+        transform: translateY(0px)
+    }
+
+    50%
+    {
+        transform: translateY(-10px)
+    }
+
+    100%
+    {
+        transform: translateY(0px)
+    }
+} 
 
 /*===================Header===================*/
 header
 {
     width: 100%;
     top: 0; right: 0;
-    z-index: 1000;
+    z-index: 1800;
     align-items: center;
     justify-content: space-between;
     background: #1D1D1D;
     transition: 0.2s;
-
 }
 
 
@@ -39,7 +74,7 @@ img.vn-icon{width: 20px;}
     margin-left: -150px;
     border-bottom: 1px solid #2f2f3b;}
 
-.header-top .row{width: 1330px}
+.header-top .row{width: 1300px}
 
 #menu
 {
@@ -54,7 +89,8 @@ img.vn-icon{width: 20px;}
         display: inline-block;
         line-height: 50px;
         font-weight: 400;
-        margin: 0px 10px 0px 10px
+        margin: 0px 10px 0px 10px;
+        z-index: 10;
     }
 
     #menu ul li a {
@@ -86,7 +122,7 @@ img.vn-icon{width: 20px;}
         
             .dropdown-content a {
                 color: #1D1D1D;
-                padding: 0px 0px 0px 15px;
+                padding: 0px 0px 0px 10px;
                 text-decoration: none;
                 display: block;
                 text-align: left;
@@ -130,7 +166,7 @@ img.vn-icon{width: 20px;}
 
 
 /*===================Site===================*/
-.site {
+#site {
     z-index: 99;
     background: #FFFFFF;
     padding: 5px 0;
@@ -150,7 +186,7 @@ table {
 
     table .shopping-cart{width: 190px}
 
-    .site .logo img
+    #site .logo img
     {
         margin-left: 40px;
         height: 70px;
@@ -158,7 +194,7 @@ table {
         text-decoration: none;
     }
 
-    .site .brand_name img
+    #site .brand_name img
     {
         margin-left: 20px;
         margin-top: 10px;
@@ -180,7 +216,7 @@ table {
         margin: 0;
     }
 
-   .site .button
+   #site .button
     {
         background-color: #1D1D1D;
         border-radius: 0px 10px 10px 0px;
@@ -193,7 +229,7 @@ table {
         margin-left: -5px
     }
 
-        .site .button:hover
+        #site .button:hover
         {
             color: #AE8F1F;
         }
@@ -208,8 +244,14 @@ table {
 
         table .shopping-cart i:hover{color: #AE8F1F}
 
-/*===================Shopping Cart===================*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+}
 
+/*===================Shopping Cart===================*/
 .overlay {
     display: none;
     position: fixed;
@@ -274,11 +316,6 @@ table {
         margin-top: -15px;
         color: #FFFFFF
     }
-    
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-        }
 
 /*===================Overall Scrollbar===================*/
 ::-webkit-scrollbar{width: 0px}
@@ -476,6 +513,7 @@ table {
                 left: 0;
                 display: none;
                 border: 1px solid #EBEBEB;
+                z-index: 5;
             }
 
                 .submenu li a{
@@ -516,7 +554,9 @@ table {
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
+                z-index: 1;
             }
+            
 
                     .first-li-submenu li a{
                         padding: 0px 10px 15px 10px;
@@ -531,6 +571,8 @@ table {
                     }
 
                         .first-li-submenu li:hover{color: #AE8F1F;}
+
+            .first-li-submenu #more{display: none;}
 
 @keyframes slidedown{
     0%{
@@ -569,48 +611,693 @@ table {
 }
 
 /*===================Begin Banner===================*/
-#banner {
-    max-width: 100%;
-    background-image: url("https://i.pinimg.com/originals/5a/ec/3b/5aec3b5096ca0d092c7fa2055f7c7878.jpg");
-    background-size: cover;
-    height: 450px;
-    display: flex;
-    padding: 0px 133px;
-    position: inherit;
-    z-index: 0;
-}
-
-    #banner .box-left, #banner .box-right{
-        width: 50%;
+.carousel-inner img 
+    {
+        width: 100%;
+        height: 600px;
     }
 
-    #banner .box-left h2
+/*===================Begin Introduce===================*/
+#nos-introduce
+{
+    max-width: 100%;
+    margin: 40px;  /*Trên, phải, dưới, trái*/
+    display: flex;
+    position: relative;
+}
+
+    #nos-introduce .nos-intro
     {
-        font-size: 48px;
-        margin-top: 120px;
+        position: relative;
+        margin: 5px;
+        width: 60%;
+        margin-left: 23%;
+    }
+
+        .nos-intro h3
+        {
+            position: relative;
+            color: #463527;
+            left: 35%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 270px;
+        }
+
+        .nos-intro hr
+        {
+            color: #463527;
+            height: 0.5px;
+            border-style: solid;
+            background-color: #463527;
+        }
+
+        .nos-intro blockquote
+        {
+            border: none;
+        }
+
+            .nos-intro blockquote:before
+            {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                content: "“";
+                font-size: 60px;
+                width: 10px;
+                display: block;
+                position: relative;
+                left: 46%;
+            }
+
+            .nos-intro blockquote p
+            {
+                text-align: justify;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+/*===================World of Cafe===================*/
+#WoC
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#WoC .WoC-design
+{
+    min-height: 450px;
+    min-width: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+#WoC .WoC-design 
+{
+    min-height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background: rgba(0, 0, 0, 0.7);
+    text-align:center;
+    color: #fff;
+}
+
+    #WoC .WoC-design h3
+    {
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    #WoC .WoC-design p
+    {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    #WoC .WoC-design .WoC-btn
+    {
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        border: none;
+        color: #1D1D1D;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+        width: 160px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+        #WoC .WoC-design span 
+            
+        {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        #WoC .WoC-design span:after
+        {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.3s;
+        }
+
+        #WoC .WoC-design .WoC-btn:hover
+        {
+            background-color: #1D1D1D;
+            color: #AE8F1F;
+        }
+
+        #WoC .WoC-design .WoC-btn:hover span{padding-right: 25px;}
+
+        #WoC .WoC-design .WoC-btn:hover span:after 
+        {
+            opacity: 1;
+            right: 0;
+        }
+
+#WoC .WoC-design video{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*===================Speciality===================*/
+.section{padding: 2rem 0 2rem;}
+
+.containerse{
+    max-width: 1024px;
+    margin-left: 240px;
+    margin-right: 200px;
+}
+
+.speciality-container{display: flex;}
+
+.section-title
+{
+    position: relative;
+    font-size: 25px;
+    padding-left: 1.25rem;
+    margin-bottom: 2.5rem;
+    width: 500px
+}
+
+.section-title::before
+{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 3px;
+    height: 20px;
+    background-color: #AE8F1F;
+}
+
+.speciality-btn{
+    display: inline-block;
+    background-color: #1D1D1D;
+    color: #FFFFFF;
+    padding: 16px 30px;
+    border-radius: 5px;
+    font-size: small;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #1D1D1D;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.speciality-button{margin-left: 27px;}
+
+    .speciality-btn:hover{
+        background: #FFFFFF;
+        color:#1D1D1D;
+        text-decoration: none;
+    }
+
+.speciality-category{
+    display: flex;
+    row-gap: 70px;
+}
+
+.speciality-img{
+    width: 80px;
+    margin-bottom: 16px;
+    transition: .4s;
+}
+
+.speciality-group{
+    margin-left: 70px;
+    margin: 10px 100px 10px 10px;
+}
+
+.speciality-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.speciality-group:hover .speciality-img{
+    transform: translateY(-10px);
+}
+
+.speciality-description
+{
+    font-size: 12px;
+    width: 230px;
+}
+
+.speciality-group::after
+{
+    content: inherit;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 3px;
+    height: 70px;
+    background-color: #AE8F1F;
+}
+
+/*===================General Tabs===================*/
+#bottom
+{
+    background: #000000;
+    height: 1400px;
+    color: #FFFFFF;
+}
+
+/*===================Title of Product Selling===================*/
+#product-selling
+{
+    max-width: 100%;
+    margin: 10px 100px 0px 100px; /*Trên, phải, dưới, trái*/
+    display: flex;
+    position: relative;
+}
+
+    #product-selling h2
+    {
+        position: absolute;
+        margin-top: 50px;
+        left: 35%;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #product-selling p
+    {
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        width: 50%;
+        left: 28%;
+        top: 50%
+    }
+
+/*===================Tabs===================*/
+.tabs 
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    left: 24%;
+}
+  
+.tabs .line 
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #AE8F1F;
+    transition: all 0.2s ease;
+}
+
+.tab-item
+{
+    min-width: 100px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+    .tab-item:hover {
+        opacity: 1;
+        border-color: rgba(194, 53, 100, 0.1);
+        color: #AE8F1F;
+    }
+
+    .tab-item.active {
+        opacity: 1;
+    }
+
+
+
+/*===================Tabs Content===================*/
+.tab-content {margin: 50px 150px 50px 150px;} /*Trên, phải, dưới, trái*/
+
+.tab-pane 
+{
+    color: #333;
+    display: none;
+}
+
+    .tab-pane.active {
+        display: block;
+    }
+
+    .tab-pane h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+  
+
+    
+/*===================Begin Post Intro===================*/
+
+.tab-content .post-intro 
+{
+    margin-left: 12px;
+    background-image: url("images/cup.jpg");
+    background-size: cover;
+    margin-top: 15px;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+    .tab-content .post-intro h2
+    {
+        position: relative;
+        width: 500px;
+        left: 32%;
+        top: 40%;
+        font-size: 28px;
         color: #FFFFFF;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
-    #banner .box-left p{
-        color: #D0D0D0
+    .tab-content .post-intro button
+    {
+        position: relative;
+        left: 46%;
+        top: 45%;
+        border: 1px solid #FFFFFF;
+        background-color: transparent;
+        width: 130px;
+        height: 50px;
+        font-weight: 600;
+        color: #FFFFFF
     }
 
-    #banner .box-left button
+    .tab-content .post-intro button:hover
+        {
+            background-color: #FFFFFF;
+            color: #1D1D1D;
+            transition: 0.4s;
+        }
+
+
+.tab-content .second-intro 
+{
+    margin-left: 12px;
+    background-image: url("https://s35422.pcdn.co/wp-content/uploads/2021/03/5.17.21_God-Has-a-Plan-1024x683-1.jpg");
+    background-size: cover;
+    margin-top: 15px;
+    width: inherit;
+    height: 600px;
+    position: relative;
+}
+
+    .tab-content .second-intro h2
     {
-        width: 210px;
-        height: 40px;
-        margin-top: 41px;
-        background: #1D1D1D;
-        border: none;
-        outline: none;
+        position: relative;
+        width: 600px;
+        left: 28%;
+        top: 35%;
+        font-size: 28px;
+        color: #000000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .tab-content .second-intro button
+    {
+        position: relative;
+        left: 47%;
+        top: 40%;
+        border: 1px solid #000000;
+        color: #000000;
+        background-color: transparent;
+        width: 100px;
+        height: 50px;
+        font-weight: 600;
+    }
+
+    .tab-content .second-intro button:hover
+        {
+            background-color: #1D1D1D;
+            color: #FFFFFF;
+            transition: 0.4s;
+        }
+
+.tab-content .third-intro 
+{
+    margin-left: 12px;
+    background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/vinyl-record-in-black-and-white-hunter-pippin.jpg");
+    background-size: cover;
+    margin-top: 15px;
+    width: inherit;
+    height: 600px;
+    position: relative;
+}
+
+    .tab-content .third-intro h2
+    {
+        position: relative;
+        width: 600px;
+        left: 24%;
+        top: 40%;
+        font-size: 28px;
         color: #FFFFFF;
-        font-weight: bold;
-        border-radius: 20px;
-        transition: 0.4s;
+        font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
-    #banner .box-left button:hover
+    .tab-content .third-intro button
     {
-        background: #6A6767;
+        position: relative;
+        left: 44%;
+        top: 45%;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        background-color: transparent;
+        width: 100px;
+        height: 50px;
+        font-weight: 600;
     }
+
+    .tab-content .third-intro button:hover
+        {
+            background-color: #FFFFFF;
+            color: #1D1D1D;
+            transition: 0.4s;
+        }
+
+
+
+.tab-content .fourth-intro 
+{
+    margin-left: 12px;
+    background-image: url("https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/385459025_1377645386163195_3175269671677445799_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6a0516&_nc_ohc=neD8rWRtwxQAX-AZilZ&_nc_ht=scontent.fhan4-3.fna&oh=00_AfDjvkmK_VBBfj1objDFkpnIhInoNaWZI1wr71MYtZwDfQ&oe=651E9727");
+    background-size: cover;
+    margin-top: 15px;
+    width: inherit;
+    height: 600px;
+    position: relative;
+}
+
+    .tab-content .fourth-intro h2
+    {
+        position: relative;
+        width: 700px;
+        left: 20%;
+        top: 40%;
+        font-size: 28px;
+        color: #FFFFFF;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .tab-content .fourth-intro button
+    {
+        position: relative;
+        left: 44%;
+        top: 45%;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        background-color: transparent;
+        width: 100px;
+        height: 50px;
+        font-weight: 600;
+    }
+
+    .tab-content .fourth-intro button:hover
+        {
+            background-color: #FFFFFF;
+            color: #1D1D1D;
+            transition: 0.4s;
+        }
+
+
+/*===================Begin Tabs Content===================*/
+.item-product-sell {margin-top: 70px;}
+
+.item-product-sell-row{
+    display: flex;
+}
+
+.hover-image{position: relative;}
+
+.hover-image img
+{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+    .hover-image img.top-psr:hover{
+        opacity: 0;
+    }
+
+.hover-content 
+{
+    color: #FFFFFF;
+    position: relative;
+    margin-top: 310px;
+    color: #EBEBEB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .hover-content .cnt-title, .hover-content .cnt-subtitle
+    {
+        font-size: 12px;
+        font-weight: 100;
+        margin-bottom: 5px;
+    }
+
+        .hover-content .cnt-title a
+        {
+            color: #F1F1F1;
+            text-decoration: none;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .hover-content .cnt-subtitle a
+        {
+            color: #F1F1F1;
+        }
+
+    .hover-content .cnt-title a:hover, .hover-content .cnt-subtitle a:hover
+    {
+        color:#AE8F1F
+    }
+
+.see-clear
+{
+    display: flex;
+    font-size: 14px;
+}
+
+    .see-clear #eyesa a
+    {
+        margin-right: 10px;
+        color: #EBEBEB;
+    }
+
+        .see-clear #eyesa a:hover
+        {
+            color: #AE8F1F
+        }
+
+    .see-clear .clearly a
+    {
+        margin-left: 10px;
+        color:#EBEBEB;
+        text-decoration: none;
+    }
+
+        .see-clear .clearly a::after
+        {
+            content: '';
+            height: 1px;
+            width: 0%;
+            background-color: #EBEBEB;
+            display: block;
+            transition: .5s ease-in-out;
+            margin-left: 10px;
+        }
+
+            .see-clear .clearly a:hover::after
+            {
+                content: '';
+                height: 1px;
+                width: 70%;
+                background-color: #e6dede;
+                display: block;
+            }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
