@@ -6,14 +6,12 @@
     <link rel="stylesheet" href="MainPage.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="JS/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <title>Cửa hàng café Nostalgia</title>
     <link rel="canonical" href="https://nostalgia.vn/">
@@ -21,10 +19,10 @@
 
 <body>
     <!----------------------------Loader---------------------------->
-    <div class="load" id="load">
+    <!-- <div class="load" id="load">
         <img src="images/logo.png" alt="#" class="load-img">
     </div>
-    <script src="loader.js"></script>
+    <script src="./JavaScript/loader.js"></script>  -->
 
     <!----------------------------Thanh Header---------------------------->
     <header>
@@ -104,7 +102,7 @@
         </table>
     </div>
 
-    <script src="sticky-site.js"></script>
+    <script src="./JavaScript/sticky-site.js"></script>
 
     <div class="overlay" id="overlay"></div>
     
@@ -163,7 +161,7 @@
         <div class="none"></div>
         
     </div>
-    <script src="shopping-cart.js"></script>
+    <script src="./JavaScript/shopping-cart.js"></script>
 
 
     <!----------------------------Thanh select---------------------------->
@@ -185,7 +183,7 @@
                         <li><a href="#" title="Di sản"><span>Di sản</span></a></li>
                     </ul>
                 </li>
-                <script src="catalog.js"></script>
+                <script src="./JavaScript/catalog.js"></script>
                 
                 <li>
                     <a href="#" class="home">TRANG CHỦ</a>
@@ -196,30 +194,66 @@
 
                     <ul class="submenu">
                         <li><a href="#" title="Café nguyên hạt">Café nguyên hạt</a></li>
-                        <li><a href="#" title="Espresso">Espresso</a></li>
                         <li>
-                            <a href="#" title="Bánh">Bánh <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                            <a href="#" title="Espresso">The SERIES <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                            
+                            <ul class="sub-submenu">
+                                <li>
+                                    <a href="#" title="Frappuchino® ">NOS-o® <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                                    <ul class="sub-submenu">
+                                        <li>
+                                            <a href="#" title="Espresso">Espresso <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+
+                                            <ul class="sub-submenu">
+                                                <li><a href="#" title="Shaken Espresso" style="width: 210px">Shaken Espresso®</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><a href="#" title="Macchiato">Macchiato</a></li>
+                                        <li><a href="#" title="Cappuccino">Cappuccino</a></li>
+                                        <li><a href="#" title="Americano">Americano</a></li>
+                                        <li>
+                                            <a href="#" title="Frappuchino® ">Frappuchino® <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                                            
+                                            <ul class="sub-submenu">
+                                                <li><a href="#" title="Frappuchino Xay" style="width: 210px">Caffeé Frappuchino®</a></li>
+                                                <li><a href="#" title="Frappuchino Trộn" style="width: 210px">Cream Frappuchino®</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="Latte">Latte</a></li>
+                                <li><a href="#" title="Flat White and Cortado">Flat White and Cortado</a></li>
+                                <li><a href="#" title="Mocha">Mocha</a></li>
+                                <li><a href="#" title="Oleato">Oleato®</a></li>
+                                <li><a href="#" title="JuNOS">JuNOS®</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" title="Đồ ăn">Đồ ăn <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
 
                             <ul class="sub-submenu">
-                                <li><a href="#" title="Muffin">Bánh Muffin</a></li>
-                                <li><a href="#" title="Cookie">Bánh Cookie</a></li>
-                                <li><a href="#" title="Sandwiches">Bánh Sandwiches</a></li>
+                                <li><a href="#" title="Breakfast">Breakfast by NOS®</a></li>
+                                <li><a href="#" title="Oatmeal and Yogurt">OatYogurt by NOS®</a></li>
+                                <li><a href="#" title="Bakery">Bakery by NOS®</a></li>
+                                <li><a href="#" title="Lunch">Lunch by NOS®</a></li>
+                                <li><a href="#" title="Snacks and Sweets">SnackSweets by NOS®</a></li>
                             </ul>
                         </li>
 
                         <li><a href="#" title="Chocolate">Chocolate</a></li>
 
+                        <li><a href="#" title="Matcha">Matcha</a></li>
                         <li>
-                            <a href="#" title="Frappuchino">Frappuchino® <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
+                            <a href="#" title="Trà">Trà pha <i class="fas fa-chevron-right" style="font-size: 13px; float: right; margin-right: 10px; margin-top: 18px"></i></a>
                             
                             <ul class="sub-submenu">
-                                <li><a href="#" title="Frappuchino Xay" style="width: 210px">Café Xay Frappuchino®</a></li>
-                                <li><a href="#" title="Frappuchino Trộn" style="width: 210px">Kem Trộn Frappuchino®</a></li>
+                                <li><a href="#" title="Hot Teas">Trà nóng</a></li>
+                                <li><a href="#" title="Iced Teas">Trà lạnh</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#" title="Matcha">Matcha</a></li>
-                        <li><a href="#" title="Trà">Trà pha</a></li>
                         <li><a href="#" title="Cacao">Cacao</a></li>
                         <li><a href="#" title="Item Collection">Phụ kiện</a></li>
                     </ul>
@@ -394,42 +428,1094 @@
 
                                 <div id="myModal" class="modal">
                                     <!-- Modal content -->
-                                    <div class="modal-content" style="width: 1200px;">
-                                      <span class="close">&times;</span>
-                                      <p>Some text in the Modal..</p>
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides">
+                                                        <img src="images/Ethiopia.png">
+                                                    </div>
+                                                  
+                                                    <div class="mySlides">
+                                                        <img src="images/ethiopian.png">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                        <div class="column" style="margin-left: 65px;">
+                                                                <img class="demo cursor" src="images/Ethiopia.png" onclick="currentSlide(1)" alt="The Woods">
+                                                        </div>
+                                                        <div class="column" style="margin-left: -7px">
+                                                                <img class="demo cursor" src="images/ethiopian.png" onclick="currentSlide(2)" alt="Cinque Terre">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ ETHIOPIA BY NOSTALGIA®</b></h3>
+                                                <div class="prices">799.000₫ 
+                                                    <span>599.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <script src="modal.js"></script>
+                            <script src="./Modal/modal.js"></script>
 
-                            <!-- <div class="col-sm-3" style="left: 10%">
-                                <img class="psr" src="images/since.png" alt="since">
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/Nicaragua.png" alt="Nicaragua">
+                                    <img class="top-psr" src="images/since.png">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Café nguyên hạt</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café Nicaragua: Hạt nguyên chất</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa1"><a href="#myModal1"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal1" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close1">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlide">
+                                                        <img src="images/since.png">
+                                                    </div>
+                                                  
+                                                    <div class="mySlide">
+                                                        <img src="images/Nicaragua.png">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                        <div class="column" style="margin-left: 65px;">
+                                                                <img class="demo cursor" src="images/since.png" onclick="currentSlide1(1)" alt="The Woods">
+                                                        </div>
+                                                        <div class="column" style="margin-left: -7px">
+                                                                <img class="demo cursor" src="images/Nicaragua.png" onclick="currentSlide1(2)" alt="Cinque Terre">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide1.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ NICARAGUA BY NOSTALGIA®</b></h3>
+                                                <div class="prices">999.000₫ 
+                                                    <span>899.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="./Modal/modal1.js"></script>
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/Rosebean.png" alt="since">
+                                    <img class="top-psr" src="images/Rose.jpg">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Café nguyên hạt</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café Rosé: Hạt nguyên chất</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa2"><a href="#myModal2"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal2" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close2">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides1">
+                                                        <img src="images/Rose.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="mySlides1">
+                                                        <img src="images/Rosebean.png">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                      <div class="column" style="margin-left: 65px;">
+                                                            <img class="demo cursor" src="images/Rose.jpg" onclick="currentSlide2(1)" alt="The Woods">
+                                                      </div>
+                                                      <div class="column" style="margin-left: -7px">
+                                                            <img class="demo cursor" src="images/Rosebean.png" onclick="currentSlide2(2)" alt="Cinque Terre">
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide2.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ ROSÉ BY NOSTALGIA®</b></h3>
+                                                <div class="prices">899.000₫ 
+                                                    <span>800.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="./Modal/modal2.js"></script>
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/Coccoa.png" alt="Ethiopia">
+                                    <img class="top-psr" src="images/Cocoa.jpg">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Bột café nguyên chất</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café Cocoa: Bột café pha</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa3"><a href="#myModal3"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal3" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close3">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides2">
+                                                        <img src="images/Cocoa.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="mySlides2">
+                                                        <img src="images/Coccoa.png">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                      <div class="column" style="margin-left: 65px;">
+                                                            <img class="demo cursor" src="images/Cocoa.jpg" onclick="currentSlide3(1)" alt="The Woods">
+                                                      </div>
+                                                      <div class="column" style="margin-left: -7px">
+                                                            <img class="demo cursor" src="images/Coccoa.png" onclick="currentSlide3(2)" alt="Cinque Terre">
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide3.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ COCOA BY NOSTALGIA®</b></h3>
+                                                <div class="prices">699.000₫ 
+                                                    <span>499.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="./Modal/modal3.js"></script>
+
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/Woman Taste.jpg" alt="Nicaragua" style="width: 170px; height: 250px; margin-left: 65px; margin-top: 25px;">
+                                    <img class="top-psr" src="images/Woman.jpg">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Bột café nguyên chất</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café WomanTaste: Bột café pha</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa4"><a href="#myModal4"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal4" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close4">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlide3">
+                                                        <img src="images/Woman.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="mySlide3">
+                                                        <img src="images/Woman Taste.jpg">
+                                                    </div>
+
+                                                    <div class="mySlide3">
+                                                        <img src="images/Woman Tastes.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                        <div class="column" style="margin-left: 65px;">
+                                                            <img class="demo cursor" src="images/Woman.jpg" onclick="currentSlide4(1)" alt="The Woods">
+                                                        </div>
+
+                                                        <div class="column" style="margin-left: -7px">
+                                                            <img class="demo cursor" src="images/Woman Taste.jpg" onclick="currentSlide4(2)" alt="Cinque Terre">
+                                                        </div>
+
+                                                        <div class="column" style="margin-left: -7px">
+                                                            <img class="demo cursor" src="images/Woman Tastes.jpg" onclick="currentSlide4(3)" alt="Cinque Terre">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide4.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ WOMANTASTE BY NOSTALGIA®</b></h3>
+                                                <div class="prices">1.999.000₫ 
+                                                    <span>1.799.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="./Modal/modal4.js"></script>
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="psr" src="images/SpecialEditions.jpg" alt="since">
+                                    <img class="top-psr" src="images/SpecialEdition.jpg">
+                                </div>
+
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Ấn phẩm Café đặc biệt</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Café est.1971 de NOS: Hạt nguyên chất</a></div>
+                                </div>
+
+                                <div class="see-clear">
+                                    <div id="eyesa5"><a href="#myModal5"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+
+                                <div id="myModal5" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close5">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides4">
+                                                        <img src="images/SpecialEdition.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="mySlides4">
+                                                        <img src="images/SpecialEditions.jpg">
+                                                    </div>
+                                                  
+                                                    <div class="row">
+                                                      <div class="column" style="margin-left: 65px;">
+                                                            <img class="demo5 cursor" src="images/SpecialEdition.jpg" onclick="currentSlide5(1)" alt="The Woods">
+                                                      </div>
+                                                      <div class="column" style="margin-left: -7px">
+                                                            <img class="demo5 cursor" src="images/SpecialEditions.jpg" onclick="currentSlide5(2)" alt="Cinque Terre">
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="./ContentSlide/content-slide5.js"></script>
+
+                                            <div class="cnt-right">
+                                                <h3><b>CAFÉ est.1971 de NOS BY NOSTALGIA®</b></h3>
+                                                <div class="prices">2.899.000₫ 
+                                                    <span>2.800.000₫</span>
+                                                </div>
+
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+
+                                                    <p class="loai">ROAST</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="low">Low Roast</option>
+                                                        <option value="medium">Medium Roast </option>
+                                                        <option value="high">High Roast </option>
+                                                    </select>
+
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="./Modal/modal5.js"></script>
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/NitroLattes.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Latte</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Latte: Nitro Latte</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa6"><a href="#myModal6"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal6" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close6">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides6">
+                                                        <img src="images/NitroLattes.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>LATTE: NITRO LATTE BY NOSTALGIA®</b></h3>
+                                                <div class="prices">69.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal6.js"></script>
                             </div>
 
-                            <div class="col-sm-3" style="left: 20%">
-                                <img class="psr" src="images/since.png" alt="since">
-                            </div> -->
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/CaramelWaffle.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Latte</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Latte: Caramel Waffle Latte</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa7"><a href="#myModal7"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal7" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close7">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides7">
+                                                        <img src="images/CaramelWaffle.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>LATTE: CARAMEL WAFFLE LATTE BY NOSTALGIA®</b></h3>
+                                                <div class="prices">79.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal7.js"></script>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/CaffeLatte.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Latte</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Latte: Caffè Latte</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa8"><a href="#myModal8"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal8" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close8">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides8">
+                                                        <img src="images/CaffeLatte.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>LATTE: CAFFÈ LATTE BY NOSTALGIA®</b></h3>
+                                                <div class="prices">59.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal8.js"></script>
+                            </div>
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/ToffeNut.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Latte</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Latte: Toffe Nut Latte</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa9"><a href="#myModal9"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal9" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close9">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides9">
+                                                        <img src="images/ToffeNut.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>LATTE: TOFFE NUT LATTE BY NOSTALGIA®</b></h3>
+                                                <div class="prices">79.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal9.js"></script>
+                            </div>
+
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/IcedCaffe.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Americano</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Americano: Iced Caffè Americano</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa10"><a href="#myModal10"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal10" class="modal">
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close10">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides10">
+                                                        <img src="images/IcedCaffe.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>AMERICANO: ICED CAFFÈ AMERICANO BY NOSTALGIA®</b></h3>
+                                                <div class="prices">69.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal10.js"></script>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/FrappuchinoMatcha.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Frappuchino®</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Frappuchino®: Matcha Crème Blended</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa11"><a href="#myModal11"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal11" class="modal">
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close11">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides11">
+                                                        <img src="images/FrappuchinoMatcha.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>FRAPPUCCINO®: MATCHA CRÈME BLENDED BY NOSTALGIA®</b></h3>
+                                                <div class="prices">79.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">SIZE</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="short">Short (8 fl oz)</option>
+                                                        <option value="low">Tall (12 fl oz)</option>
+                                                        <option value="medium">Grande (16 fl oz)</option>
+                                                        <option value="high">Venti (24 fl oz)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal11.js"></script>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="hover-image">
+                                    <img class="top-psr-dif" src="images/BlackBread.png">
+                                </div>
+    
+                                <div class="hover-content">
+                                    <div class="cnt-title"><a href="#">Bakery by NOS®</a></div>
+                                    <div class="cnt-subtitle"><a href="#">Bakery by NOS®: Black Bread Like Name</a></div>
+                                </div>
+    
+                                <div class="see-clear">
+                                    <div id="eyesa12"><a href="#myModal12"><i class="fas fa-eye"></i></a></div> |
+                                    <div class="clearly"><a href="#">Xem chi tiết &ensp; <i class="fas fa-angle-right"></i></a></div>
+                                </div>
+    
+                                <div id="myModal12" class="modal">
+                                    <div class="modal-content" style="width: 1050px">
+                                        <span class="close12">&times;</span>
+                                        <div class="modal-cnt">
+                                            <div class="cnt-left">
+                                                <div class="cnt-left-container">
+                                                    <div class="mySlides12">
+                                                        <img src="images/BlackBread.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="cnt-right">
+                                                <h3><b>BAKERY BY NOS®: BLACK BREAD BY NAME</b></h3>
+                                                <div class="prices">49.000₫</div>
+    
+                                                <div class="cnt-right-product">
+                                                    <p>Hạt cà phê có xuất xứ từ một vùng duy nhất, không giống như các hạt cà phê khác của Nostalgia, Ethiopia là hạt cà phê đã được rang một cách rất riêng cho người thử cà phê một hương vị cà phê rất tinh tế.</p>
+    
+                                                    <p class="loai">LOAVES</p>
+                                                    <select id="roast" name="Các loại mức độ">
+                                                        <option value="6">6 Loaves (90g)</option>
+                                                        <option value="10">10 Loaves (100g)</option>
+                                                        <option value="12">12 Loaves (110g)</option>
+                                                    </select>
+    
+                                                    <input class="met" type="number" value="5" min="1">
+                                                    <button class="add-product">Thêm vào giỏ hàng</button>
+    
+                                                    <div class="social">
+                                                        <span class="loais">SHARE OUR PRODUCT!</span>
+    
+                                                        <a href="#" class="fab fa-facebook"></a>
+                                                        <a href="#" class="fab fa-twitter"></a>
+                                                        <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="./Modal/modal12.js"></script>
+                            </div>
                         </div>
+                    </div>
+
+                    <ul class="listPage">
+                        <li class="active">1</li>
+                        <li>2</li>
+                    </ul>
+                    <script src="./JavaScript/phan-trang.js"></script>
+                </div>
+
+                <div class="tab-pane">
+                    <div class="second-intro">
+                        <h2 style="margin-left: 190px; margin-bottom: 20px; font-size: 20px">BEST SELLER</h2>
+                        <h2>SẢN PHẨM BÁN CHẠY CỦA NOSTALGIA</h2>
+    
+                        <button>KHÁM PHÁ</button>
                     </div>
                 </div>
 
                 <div class="tab-pane">
-                    <h2>Angular</h2>
-                    <p>Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.</p>
+                    <div class="third-intro">
+                        <h2 style="margin-left: 220px; font-size: 20px; width: 200px; margin-bottom: 20px;">HOT DEALS</h2>
+                        <h2>SẢN PHẨM GIẢM GIÁ SÂU CỦA NOSTALGIA</h2>
+    
+                        <button>KHÁM PHÁ</button>
+                    </div>
                 </div>
 
                 <div class="tab-pane">
-                    <h2>Ember</h2>
-                    <p>Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</p>
-                </div>
-
-                <div class="tab-pane">
-                    <h2>Vue.js</h2>
-                    <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. </p>
+                    <div class="fourth-intro">
+                        <h2 style="margin-left: 250px; font-size: 20px; width: 200px; margin-bottom: 20px;">FLASH SALES</h2>
+                        <h2>SẢN PHẨM GIẢM GIÁ THEO ĐỢT CỦA NOSTALGIA</h2>
+    
+                        <button>KHÁM PHÁ</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="tabs.js"></script>
+    <script src="./JavaScript/tabs.js"></script>
+    
+
+    <!----------------------------Blog---------------------------->
+    <div class="blogs" id="blog">
+        <div class="speciality-container">
+            <div class="speciality-box">
+                <h2 class="section-title">
+                    <b>NOS BLOG!</b> Hãy hòa vào câu chuyện của chúng tôi trên khắp thế giới!
+                </h2>
+            </div>
+
+            <div class="blank-space" style="width: 220px;"></div>
+
+            <div>
+                <a href="#" class="speciality-btn speciality-button">Xem thêm</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="bai-viet-moi">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row-col">
+                        <div class="image">
+                            <img src="https://i.pinimg.com/564x/d1/c1/d4/d1c1d4a70cf5b910e7860eacdcdcae7a.jpg">
+                        </div>
+                        
+                        <div class="title-blog">
+                            <p><a href="#"><b>[NOS FEELING]</b> NHỮNG HẠT CAFE TỚI TỪ TÂM NGƯỜI TẠO</a></p>
+                        </div>
+    
+                        <div class="date">
+                            <i class="far fa-clock"></i> &ensp; November 27th, 2023
+                        </div>
+    
+                        <div class="blog-content">
+                            <p>
+                                Cà phê đã trải qua một chặng đường dài từ khởi đầu khiêm tốn đến trở thành một trong những loại đồ uống được yêu thích và tiêu thụ rộng rãi nhất trên thế giới. Trong suốt lịch sử của mình, cà phê đã trải qua nhiều làn sóng chuyển đổi […]
+                            </p>
+                        </div>
+    
+                        <div class="watcher">
+                            <i class="far fa-eye"></i> 479,9k &ensp;
+                            <i class="far fa-comment-alt"></i> 4,9k
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row-col">
+                        <div class="image">
+                            <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/6eca3a264ac312cafecdfc3f5a3b182b.jpg?fit=2732%2C1086">
+                        </div>
+                        
+                        <div class="title-blog">
+                            <p><a href="#"><b>[NOS TRAVEL]</b> BUENA VIDA, HÀNH TRÌNH VỀ XỨ SỞ FAIRY TALE Ở POTSDAM</a></p>
+                        </div>
+    
+                        <div class="date">
+                            <i class="far fa-clock"></i> &ensp; November 28th, 2023
+                        </div>
+    
+                        <div class="blog-content">
+                            <p>
+                                Potsdam là một thị trấn quyến rũ và đẹp như tranh vẽ, chỉ cách thành phố Berlin nhộn nhịp khoảng 30 phút ngồi tàu S Bahn. Được biết đến với kiến trúc tuyệt đẹp, lịch sử phong phú và không gian xanh mướt, Potsdam là điểm đến không thể bỏ qua cho bất kỳ ai […]
+                            </p>
+                        </div>
+    
+                        <div class="watcher">
+                            <i class="far fa-eye"></i> 479,9k &ensp;
+                            <i class="far fa-comment-alt"></i> 4,9k
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row-col">
+                        <div class="image">
+                            <img src="https://i.pinimg.com/564x/9b/6b/83/9b6b831e7aaff611b29087cec60d5c27.jpg">
+                        </div>
+                        
+                        <div class="title-blog">
+                            <p><a href="#"><b>[NOS TUTORIAL]</b> CÓ NÊN ĐI HỌC KHOÁ HỌC CÀ PHÊ</a></p>
+                        </div>
+    
+                        <div class="date">
+                            <i class="far fa-clock"></i> &ensp; November 29th, 2023
+                        </div>
+    
+                        <div class="blog-content">
+                            <p>
+                                Trên đời này muốn biết được cái gì hoặc làm được nghề gì với kỹ năng mà bạn chưa biết, bạn đều phải đi học. Học từ bé đến lớn, từ biết đọc, biết viết, cho đến những kỹ năng chuyên môn. Điều này đúng như chân lý, nhỉ?
+                            </p>
+                        </div>
+    
+                        <div class="watcher">
+                            <i class="far fa-eye"></i> 479,9k &ensp;
+                            <i class="far fa-comment-alt"></i> 4,9k
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------Footer---------------------------->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img class="brands-logo" src="./images/logo.png">
+                <img class="brands" src="./images/logo-white.png">
+                
+                <p style="text-align: justify; margin-top: 20px;">Chân thành cảm ơn bạn đã ghé thăm trang web của quán cafe Nostalgia. Chúng tôi rất vui mừng được chia sẻ không gian ấm áp và hương vị đặc biệt cùng bạn!</p> 
+            </div>
+
+            <div class="col"  style="margin-left: 50px;">
+                <h3>Official <div class="underline"><span></span></div></h3>
+                <p>Số 10 Nguyễn Công Hoan, Lê Lợi, TP Hưng Yên, Tỉnh Hưng Yên</p>
+                <p>Hưng Yên, PIN 160000, Việt Nam</p>
+                <p class="email-id">online.nostalgiavn@gmail.com</p>
+                <h5 style="font-size: 18px;">+89 - 9 1337 7629</h5>
+            </div>
+
+            <div class="col" style="margin-left: 50px;">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="ul-chan">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dịch vụ</a></li>
+                    <li><a href="">Về Nostalgia</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col" style="margin-left: -20px;">
+                <h3 style="margin-bottom: 30px;">Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Điền email của bạn">
+                    <button type="submit"><i class="fas fa-feather-alt"></i></button>
+                </form>
+
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-chan">
+        <p class="copyright">NOSTALGIA © Since 2003 - All Right Reserved</p>
+    </footer>
 </body>
 </html>
