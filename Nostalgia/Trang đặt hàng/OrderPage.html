@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OrderPage.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <title>Giỏ hàng</title>
+    <link rel="canonical" href="https://nostalgia.shopping-cart.vn/">
+</head>
+<body>
+    <!----------------------------Thanh Header---------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div id="menu">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><img src="images/vietnam_icon.png" class="vn-icon"> VIETNAMESE(VN) <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VIETNAMESE(VN)</a>
+                                        <a href="#">ENGLISH(ENG)</a>
+                                        <a href="#">JAPANESE(JP)</a>
+                                        <a href="#">CHINESE(CN)</a>
+                                    </div>
+                                </li>
+                
+                                <li class="dropdown">
+                                    <a href="#"> VND <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VND - Vietnam Dong</a>
+                                        <a href="#">EUR – Euro</a>
+                                        <a href="#">JPY - Japanese Yen</a>
+                                        <a href="#">CNY - Chinese Yuan</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div id="sec-menu">
+                            <ul>
+                                <li><a href="#">ĐĂNG KÝ</a></li>
+                                <li><a href="#">ĐĂNG NHẬP</a></li>
+                                <li><a href="#">GIỎ HÀNG</a></li>
+                                <li><a href="#">THANH TOÁN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------Thanh Site---------------------------->
+    <div id="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="images/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./JavaScript/sticky-site.js"></script>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF">Cart</span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Ethiopia.png" alt="Ethiopia">
+                <div class="content">
+                    <h3><b>Café Ethiopia by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">599.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/DeCaf.jpg" alt="DeCaf">
+                <div class="content">
+                    <h3><b>Café DeCaf by Nos®</b></h3>
+                    <div class="qty">Số lượng: 02</div>
+                    <div class="price">1.799.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Rose.jpg" alt="Rose">
+                <div class="content">
+                    <h3><b>Café Rosé by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">399.000₫</div>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <span><b>Tổng:</b></span>
+                <span class="t-price">2.797.000₫</span>
+            </div>
+
+            <div class="total-prices">
+                <span><b>Chiết khấu:</b></span>
+                <span class="t-price">2.500.000₫</span>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-shopping-cart"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-cash-register"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="./JavaScript/shopping-cart.js"></script>
+
+    <!----------------------------Thanh Breadcrumb---------------------------->
+    <ul id="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Giỏ hàng</a></li>
+    </ul>
+
+    <!----------------------------Giỏ hàng in the nutshell---------------------------->
+    <div id="cart">
+        <table border="1">
+            <tr style="border-bottom: 3px solid #1D1D1D;">
+                <th style="padding: 10px; text-align: center;">Xóa</th>
+                <th style="padding: 10px; text-align: center;">Hình ảnh</th>
+                <th style="padding: 10px; text-align: center;">Sản phẩm</th>
+                <th style="padding: 10px; text-align: center;">Giá</th>
+                <th style="padding: 10px; text-align: center;">Số lượng</th>
+                <th style="padding: 10px; text-align: center;">Tổng</th>
+            </tr>
+
+            <tr>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">x</a></td>
+                <td style="padding: 10px; text-align: center; width: 150px; height: 150px;"><img src="./images/Ethiopia.png"></td>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Café Ethiopia by Nos®</a></td>
+                <td style="padding: 10px; text-align: center;">599.000₫</td>
+                <td style="padding: 10px; text-align: center;"><b>Số lượng:</b> &ensp; <input type="number" name="quantity" min="1"></td>
+                <td style="padding: 10px; text-align: center;">599.000₫</td>
+            </tr>
+
+            <tr>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">x</a></td>
+                <td style="padding: 10px; text-align: center; width: 150px; height: 150px;"><img src="./images/DeCaf.jpg"></td>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Café DeCaf by Nos®</a></td>
+                <td style="padding: 10px; text-align: center;">899.500₫</td>
+                <td style="padding: 10px; text-align: center;"><b>Số lượng:</b> &ensp; <input type="number" name="quantity" min="1"></td>
+                <td style="padding: 10px; text-align: center;">1.799.000₫</td>
+            </tr>
+
+            <tr>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">x</a></td>
+                <td style="padding: 10px; text-align: center; width: 150px; height: 150px;"><img src="./images/Rose.jpg"></td>
+                <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Café Rosé by Nos®</a></td>
+                <td style="padding: 10px; text-align: center;">399.000₫</td>
+                <td style="padding: 10px; text-align: center;"> <b>Số lượng:</b> &ensp; <input type="number" name="quantity" min="1"></td>
+                <td style="padding: 10px; text-align: center;">399.000₫</td>
+            </tr>
+
+            <tr>
+                <td style="padding: 30px; text-align: right;" colspan="6"><a href="#" class="update-cart">Cập nhật giỏ hàng</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="total-coupon">
+        <div class="coupon">
+            <div class="coupon-title"><h3>COUPON</h3></div>
+
+            <div class="coupon-inner">
+                <p>Nhập mã giảm giá của bạn nếu có.</p>
+
+                <div class="input-coupn">
+                    <input class="coupon-code" type="text" placeholder="Mã giảm giá">
+                    <a href="#" class="enter-coupon">Nhập mã</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="total">
+            <div class="coupon-title"><h3>TOTAL PRICE</h3></div>
+
+            <div class="total-tong">
+                <div class="totally">
+                    <div class="tgt">
+                        <p><b>Tổng giá tiền:</b></p>
+                    </div>
+
+                    <div class="tgts">
+                        <p>2.500.000₫</p>
+                    </div>
+                </div>
+
+                <div class="shipping-total">
+                    <div class="tgt">
+                        <p><b>Tổng giá tiền:</b></p>
+                    </div>
+
+                    <div class="tgts">
+                        <p>2.550.000₫</p>
+                    </div>
+                </div>
+
+                <div class="shipping-totals">
+                    <div class="tgt">
+                        <p><b></b></p>
+                    </div>
+
+                    <div class="tgts">
+                        <p><b>Tính tổng giá</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overall-total">
+                <div class="shipping-totally">
+                    <div class="tgt">
+                        <p><b>Tổng</b></p>
+                    </div>
+
+                    <div class="tgts">
+                        <p><b>2.550.000₫</b></p>
+                    </div>
+                </div>
+
+                <div class="shipping-totallys">
+                    <div class="tgt">
+                        <p></p>
+                    </div>
+
+                    <div class="tgts">
+                        <p><a href="#" class="lhd">Lập hóa đơn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Footer---------------------------->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img class="brands-logo" src="./images/logo.png">
+                <img class="brands" src="./images/logo-white.png">
+                
+                <p style="text-align: justify; margin-top: 20px;">Chân thành cảm ơn bạn đã ghé thăm trang web của quán cafe Nostalgia. Chúng tôi rất vui mừng được chia sẻ không gian ấm áp và hương vị đặc biệt cùng bạn!</p> 
+            </div>
+
+            <div class="col"  style="margin-left: 50px;">
+                <h3>Official <div class="underline"><span></span></div></h3>
+                <p>Số 10 Nguyễn Công Hoan, Lê Lợi, TP Hưng Yên, Tỉnh Hưng Yên</p>
+                <p>Hưng Yên, PIN 160000, Việt Nam</p>
+                <p class="email-id">online.nostalgiavn@gmail.com</p>
+                <h5 style="font-size: 18px;">+89 - 9 1337 7629</h5>
+            </div>
+
+            <div class="col" style="margin-left: 50px;">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="ul-chan">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dịch vụ</a></li>
+                    <li><a href="">Về Nostalgia</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col" style="margin-left: -20px;">
+                <h3 style="margin-bottom: 30px;">Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Điền email của bạn">
+                    <button type="submit"><i class="fas fa-feather-alt"></i></button>
+                </form>
+
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-chan">
+        <p class="copyright">NOSTALGIA © Since 2003 - All Right Reserved</p>
+    </footer>
+</body>
+</html>

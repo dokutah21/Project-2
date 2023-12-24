@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogsu.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Blog</title>
+    <link rel="canonical" href="https://nostalgia.blog.vn/">
+</head>
+<body>
+    <!----------------------------Thanh Header---------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div id="menu">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><img src="images/vietnam_icon.png" class="vn-icon"> VIETNAMESE(VN) <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VIETNAMESE(VN)</a>
+                                        <a href="#">ENGLISH(ENG)</a>
+                                        <a href="#">JAPANESE(JP)</a>
+                                        <a href="#">CHINESE(CN)</a>
+                                    </div>
+                                </li>
+                
+                                <li class="dropdown">
+                                    <a href="#"> VND <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VND - Vietnam Dong</a>
+                                        <a href="#">EUR – Euro</a>
+                                        <a href="#">JPY - Japanese Yen</a>
+                                        <a href="#">CNY - Chinese Yuan</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div id="sec-menu">
+                            <ul>
+                                <li><a href="#">ĐĂNG KÝ</a></li>
+                                <li><a href="#">ĐĂNG NHẬP</a></li>
+                                <li><a href="#">GIỎ HÀNG</a></li>
+                                <li><a href="#">THANH TOÁN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------Thanh Site---------------------------->
+    <div id="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="images/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./JavaScript/sticky-site.js"></script>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF">Cart</span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Ethiopia.png" alt="Ethiopia">
+                <div class="content">
+                    <h3><b>Café Ethiopia by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">599.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/DeCaf.jpg" alt="DeCaf">
+                <div class="content">
+                    <h3><b>Café DeCaf by Nos®</b></h3>
+                    <div class="qty">Số lượng: 02</div>
+                    <div class="price">1.799.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Rose.jpg" alt="Rose">
+                <div class="content">
+                    <h3><b>Café Rosé by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">399.000₫</div>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <span><b>Tổng:</b></span>
+                <span class="t-price">2.797.000₫</span>
+            </div>
+
+            <div class="total-prices">
+                <span><b>Chiết khấu:</b></span>
+                <span class="t-price">2.500.000₫</span>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-shopping-cart"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-cash-register"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="./JavaScript/shopping-cart.js"></script>
+    <!----------------------------Thanh Breadcrumb---------------------------->
+    <ul id="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">BUENA VIDA, HÀNH TRÌNH VỀ XỨ SỞ FAIRY TALE Ở POTSDAM</a></li>
+    </ul>
+
+    <!----------------------------Blog---------------------------->
+    <div id="blogs">
+        <div class="blog-left">
+            <div><h3>BUENA VIDA, HÀNH TRÌNH VỀ XỨ SỞ FAIRY TALE Ở POTSDAM</h3></div>
+
+            <p class="posted-by"><i>Dec 21, 2023 · by Julie Nguyễn · in Germany</i></p>
+
+            <div class="paragraph">
+                <p>Potsdam là một thị trấn quyến rũ và đẹp như tranh vẽ, chỉ cách thành phố Berlin nhộn nhịp khoảng 30 phút ngồi tàu S Bahn. Được biết đến với kiến trúc tuyệt đẹp, lịch sử phong phú và không gian xanh mướt, Potsdam là điểm đến không thể bỏ qua cho bất kỳ ai đi du lịch trong khu vực Berlin và Đông Bắc nước Đức.</p>
+            </div>
+
+            <img src="https://s.net.vn/lOwt">
+
+            <p class="note"><i>(Ảnh: một góc phố cổ ở Potsdam, nguồn: Justiamo)</i></p>
+
+            <div class="paragraph">
+                <p>Mình ghé Potsdam vào một ngày mùa xuân tháng 3. Cả nhà đến đây vào cuối tuần nên đường phố vô cùng yên tĩnh, vắng vẻ và… cũng may là một số quán cà phê vẫn mở cửa dịp này. Trước khi rủ nhau đi uống cà phê, chúng ta cùng dạo chơi một vòng quanh Potsdam và tìm hiểu về văn hóa cũng như lịch sử của thị trấn nhỏ bé này một chút nhé.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Một trong những đặc điểm nổi bật nhất của Potsdam là sự pha trộn độc đáo giữa các phong cách kiến trúc. Thị trấn là nơi có nhiều tòa nhà lịch sử, nhiều tòa nhà được xây dựng dưới triều đại của Frederick Đại đế vào thế kỷ 18. Nổi tiếng nhất trong số này chắc chắn là Cung điện Sanssouci, một tòa nhà tráng lệ theo phong cách rococo và từng là nơi nghỉ ngơi vào mùa hè của các vị vua Phổ. Các di sản kiến trúc đáng chú ý khác của Potsdam bao gồm Cung điện Mới, Cung điện Orangery và Cung điện Cẩm thạch.</p>
+            </div>
+
+            <div class="three-size">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/image-1.png?resize=683%2C1024&ssl=1">
+                <img src="https://s.net.vn/8RlU">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Muehle_sanssouci1.jpg/800px-Muehle_sanssouci1.jpg">
+            </div>
+
+            <div class="paragraph">
+                <p>Đối với những người yêu thích lịch sử, Potsdam là một kho tàng tuyệt đối chứa đựng những câu chuyện và hiện vật văn hóa hấp dẫn. Thị trấn từng là trung tâm của Đế chế Prussian Empire, và du khách có thể khám phá nhiều bảo tàng và di tích lịch sử mang đến cái nhìn thoáng qua về giai đoạn lịch sử châu Âu. Đáng chú ý nhất trong số này là Bảo tàng Cung điện Potsdam, nằm trong cung điện hoàng gia cũ và chứa một bộ sưu tập nghệ thuật phong phú từ thế kỷ 18 và 19.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Các bảo tàng đáng chú ý khác ở Potsdam bao gồm Bảo tàng Barberini, nơi trưng bày bộ sưu tập nghệ thuật hiện đại và Bảo tàng Điện ảnh Potsdam, nơi khám phá lịch sử điện ảnh Đức. Riêng bảo tàng điện ảnh thì nằm ngay trung tâm, nhưng hôm đó thời gian hạn hẹp nên mình không ghé chơi được.</p>
+            </div>
+
+            <div class="three-size">
+                <img src="https://www.mediastorehouse.com.au/p/251/new-palace-sanssouci-gardens-potsdam-19347178.jpg.webp">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/4.jpg?resize=683%2C1024&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/7.jpg?resize=683%2C1024&ssl=1">
+            </div>
+
+            <div class="paragraph">
+                <p>Ngoài những công trình lịch sử, Potsdam còn được biết đến là nơi làm bối cảnh dựng nhiều bộ phim nổi tiếng như “Vòng quanh Thế Giới trong 80 ngày”, với studio nổi tiếng Babelsberg. Bên cạnh đó Potsdam còn là một điểm đến cho những người yêu thích ẩm thực và rượu vang. Thị trấn được bao quanh bởi một số vùng nông nghiệp màu mỡ nhất của Đức, nơi sản xuất nhiều loại trái cây, rau và rượu vang ngon. Nếu có thời gian, bạn có thể nếm thử hoặc tham quan một trong những vườn nho gần đó để tìm hiểu thêm về truyền thống làm rượu vang của địa phương.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Nếu đến Potsdam vào một ngày nắng đẹp, như gia đình mình đã may mắn đi chơi ngày hôm ấy, bạn sẽ thấy nơi đây ngắm hoài không chán.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Bây giờ, thì mình cùng đi uống cà phê thôi.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Cà phê ở Potsdam hẻo lánh và nhỏ bé này có nhiều không? có đáng để thử không? Thực ra thì không nhiều và đa phần các quán cà phê nổi tiếng (trên các trang review du lịch) ở đây lại thuộc phong cách cà phê bánh ngọt truyền thống kiểu châu Âu. Những cái tên như Café Drachenhaus, Krongut Bornstedt, Café Guam, v.v.. sẽ khiến bạn nản lòng vì khi tìm hiểu thì đó không phải specialty coffee.</p>
+            </div>
+
+            <div class="three-sizes">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/2b6dab1defc954c581cccd129b9ecfad.jpg?resize=768%2C512&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/ecf41ec3bc4d70c73c5a9864ad13848c.jpg?resize=683%2C1024&ssl=1">
+            </div>
+            
+            <div class="paragraph">
+                <p>Khi bắt đầu nản lòng một chút thì vợ mình tìm thấy một quán specialty coffee với cái tên khá lạ lẫm: ‘Buena Vida’, tiếng Tây Ban Nha nghĩa là ‘cuộc sống tốt đẹp’ (Good Life). Đây gần như là lựa chọn duy nhất để gia đình mình có thể thử trải nghiệm cà phê ở thị trấn nhỏ này.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Nằm ở trung tâm khu lịch sử của Potsdam. Quán có phong cách ấm cúng với bầu không khí thoải mái, thân thiện và dễ chịu. Nội thất của quán được trang trí với màu sắc ấm áp, tông màu trầm đặc trưng của châu Âu, đồng thời có nhiều lựa chọn chỗ ngồi thoải mái, nơi khách có thể ngồi lại và thưởng thức bánh hoặc cà phê với nhiều sự lựa chọn. Buena Vida Cafe lấy nguồn cà phê từ một số specialty roastery và cung cấp nhiều loại đồ uống như cappuccino, lattes và batch brew (một dạng filter coffee pha máy)..</p>
+            </div>
+
+            <div class="three-sizes">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/e477881ce36cac4ba7067709d9ef0acb.jpg?resize=683%2C1024&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/1361a472158a2e5512907523de8b76e3.jpg?resize=768%2C512&ssl=1">
+            </div>
+
+            <div class="paragraph">
+                <p>Thoạt nhìn thì quán vắng vẻ và menu đồ uống, cũng như bánh ngọt không có gì quá đặc biệt. Tuy nhiên, đây là lựa chọn duy nhất của gia đình mình vào ngày cuối tuần ở đây, nên mình cứ mạnh dạn thử thôi. Vợ mình gọi Chai latte, còn mình chọn đồ uống batch brew (bởi dạo này mình uống latte nhiều quá rồi). Nhà mình cũng gọi thử một phần bánh karrot kuchen (bánh cà rốt) để ăn kèm với đồ uống.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Và rồi, mọi thứ như một điều bất ngờ kỳ diệu.</p>
+            </div>
+
+            <div class="three-size">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/img_2113.jpg?resize=683%2C1024&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/5a63ca77801acc740e4f8071e61b0b71.jpg?resize=683%2C1024&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/52744310339_48044d458d_h.jpg?resize=683%2C1024&ssl=1">
+            </div>
+
+            <div class="paragraph">
+                <p>Cà phê batch brew rất ngon, ngon hơn cả filter coffee mà mình tự pha chế ở nhà. Chai latte cũng ngon ‘bá cháy’, theo lời vợ mình nhận xét thì: “ngon nhất trong tất cả những nơi từng thử”. Có lẽ để so sánh được với Chai latte ở Buena Vida thì chỉ có ở Urban coffee roaster mà tụi mình từng ghé thăm ở Hong Kong hồi năm 2019.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Nhưng ngon hơn cả, đó chính là món bánh karrot. Chiếc bánh nhỏ xinh với một lớp kem béo ngậy ở trên, không quá ngọt, mềm mại và mượt mà, thơm mịn và mềm xốp tan trong miệng. Khác với những chiếc bánh cà rốt bình thường ở nhiều tiệm bánh hay quán cà phê thường bị khô và thiếu độ mềm, độ ẩm, bánh cà rốt ở đây dường như hoàn hảo ở mọi mặt từ hình thức tới hương vị thơm ngon.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Nhìn chung, một chiếc bánh cà rốt ngon phải có kết cấu ẩm và mềm, vị ngọt và cay (spicy) cân bằng, những miếng cà rốt nạo nhỏ trong suốt, lớp kem phủ phô mai béo ngậy, nguyên liệu tươi và kỹ thuật nướng phù hợp. Những yếu tố này kết hợp với nhau để tạo ra một món tráng miệng ngon và đáng nhớ sẽ khiến bạn quay trở lại để thưởng thức nhiều lần hơn nữa. Vâng, những yếu tố này, mình khẳng định một lần nữa, đều có trong chiếc bánh nhỏ xinh kia ở Potsdam.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Và kết quả là nhà mình phải gọi thêm một chiếc nữa để thưởng thức.</p>
+            </div>
+
+            <div class="three-size">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/1a52cb66e35c48834c2d01549b5ca3bc.jpg?resize=683%2C1024&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/350b0bbf1bfd0126b9205677af791c16.jpg?resize=768%2C512&ssl=1">
+                <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/img_2115.jpg?resize=683%2C1024&ssl=1">
+            </div>
+
+            <div class="paragraph">
+                <p>Mình đã không kỳ vọng nhiều ở Buena Vida, nhưng kết quả lại ngoài mong đợi. Mình không nghĩ ở thị trấn nhỏ bé này, cà phê và bánh lại ngon đến thế. Có lẽ, mọi thứ ở đây cũng đúng như tên gọi ‘fairy tale’ mà người ta đặt tên cho mảnh đất này, luôn nhẹ nhàng, yên bình và kỳ diệu.</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Và Buena Vida đã làm được đúng như những gì họ ghi trên chiếc máy espresso của mình, ‘Make Arabica coffee great again’.</p>
+            </div>
+
+            <img src="https://i0.wp.com/seedtomysoul.com/wp-content/uploads/2023/04/6eca3a264ac312cafecdfc3f5a3b182b.jpg?resize=768%2C512&ssl=1">
+
+            <div class="paragraph">
+                <p>P.S: Lần tới ghé Berlin, chắc chắn mình sẽ quay trở lại Potsdam.</p>
+            </div>
+
+            <div class="socials"> <p><b>Chia sẻ bài viết này!</b></p>
+                <div class="social"><a href="#"><i class="fab fa-facebook"></i></a></div>
+                <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="social"><a href="#"><i class="fab fa-pinterest"></i></a></div>
+                <div class="social"><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                <div class="social"><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+
+            <div class="related-posts">
+                <div class="post-card">
+                    <img src="./images/passe.jpg" class="post-img">
+                    <div class="info">
+                        <p><a href="#" class="title-post">Đi du lịch với Café</a></p>
+
+                        <p class="time-post"><i>In Nov23, 2023</i></p>
+
+                        <p class="tag-post"><i>In 'Traveling with Nos and Café'</i></p>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <img src="./images/ifour.jpg" class="post-img">
+                    <div class="info">
+                        <p><a href="#" class="title-post">03 quán cà phê nên thử ở Hamburg</a></p>
+
+                        <p class="time-post"><i>In Nov30, 2023</i></p>
+
+                        <p class="tag-post"><i>In 'Traveling with Nos and Café'</i></p>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <img src="./images/costa.jpg" class="post-img">
+                    <div class="info">
+                        <p><a href="#" class="title-post">Công thức của sự hoài cổ</a></p>
+
+                        <p class="time-post"><i>In Nov23, 2023</i></p>
+
+                        <p class="tag-post"><i>In 'Nostalgia'</i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leave-comment">
+                <div class="leave"><h2>ĐỂ LẠI BÌNH LUẬN!</h2></div>
+
+                <input type="text" class="comt">
+
+                <div class="info-post">
+                    <div class="names">
+                        <div class="leaves"><h2>Tên</h2></div>
+    
+                        <input type="text" class="sub-cmt">
+                    </div>
+
+                    <div class="surname">
+                        <div class="leaves"><h2>Họ</h2></div>
+                         
+                        <input type="text" class="sub-cmt">
+                    </div>
+
+                    <div class="email">
+                        <div class="leaves"><h2>Email</h2></div>
+                         
+                        <input type="text" class="sub-cmt">
+                    </div>
+                </div>
+
+                <a href="#" class="send">Gửi bình luận!</a>
+            </div>
+        </div>
+
+        <div class="blog-right">
+            <div><h3>LIST NHẠC TIÊU BIỂU CỦA TUẦN!</h3></div>
+
+            <p class="posted-by"><i>Có lẽ bạn cần chút giai điệu khi đọc blog chúng tôi?</i></p>
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1742229219%3Fsecret_token%3Ds-Jec3LU7VHdo&color=%23ae8f1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kh-nh-huy-n-nguy-n-533856199" title="Khánh Huyền Nguyễn" target="_blank" style="color: #cccccc; text-decoration: none;">Khánh Huyền Nguyễn</a> · <a href="https://soundcloud.com/kh-nh-huy-n-nguy-n-533856199/sets/music-for-soul/s-Jec3LU7VHdo" title="Music For Soul" target="_blank" style="color: #cccccc; text-decoration: none;">Music For Soul</a></div>
+        
+            <div class="search-blogs">
+                <div class="search-blog">
+                    <h4>SEARCH</h4>
+
+                    <input type="text" placeholder="tìm kiếm" class="search-box">
+
+                    <div class="search-tool">
+                        <a href="#">Tìm kiếm</a>
+                    </div>
+
+                    <h4>SOCIAL</h4>
+
+                    <div class="socials">
+                        <div class="social"><a href="#"><i class="fab fa-facebook"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-pinterest"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                    </div>
+                </div>
+
+                <div class="search-blog">
+                    <h4>CATEGORIES</h4>
+
+                    <div class="categories">
+                        <div class="category"><a href="#">Tản văn</a></div>
+                        <div class="category"><a href="#">Giới thiệu công thức Café</a></div>
+                        <div class="category"><a href="#">Series Nostalgia</a></div>
+                        <div class="category"><a href="#">Câu chuyện về Café</a></div>
+                        <div class="category"><a href="#">Cảm hứng</a></div>
+                    </div>
+
+                    <div class="sees-more">
+                        <a href="#" class="see-more">Xem thêm <span><i class="fas fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Footer---------------------------->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img class="brands-logo" src="./images/logo.png">
+                <img class="brands" src="./images/logo-white.png">
+                
+                <p style="text-align: justify; margin-top: 20px;">Chân thành cảm ơn bạn đã ghé thăm trang web của quán cafe Nostalgia. Chúng tôi rất vui mừng được chia sẻ không gian ấm áp và hương vị đặc biệt cùng bạn!</p> 
+            </div>
+
+            <div class="col"  style="margin-left: 50px;">
+                <h3>Official <div class="underline"><span></span></div></h3>
+                <p>Số 10 Nguyễn Công Hoan, Lê Lợi, TP Hưng Yên, Tỉnh Hưng Yên</p>
+                <p>Hưng Yên, PIN 160000, Việt Nam</p>
+                <p class="email-id">online.nostalgiavn@gmail.com</p>
+                <h5 style="font-size: 18px;">+89 - 9 1337 7629</h5>
+            </div>
+
+            <div class="col" style="margin-left: 50px;">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="ul-chan">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dịch vụ</a></li>
+                    <li><a href="">Về Nostalgia</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col" style="margin-left: -20px;">
+                <h3 style="margin-bottom: 30px;">Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Điền email của bạn">
+                    <button type="submit"><i class="fas fa-feather-alt"></i></button>
+                </form>
+
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-chan">
+        <p class="copyright">NOSTALGIA © Since 2003 - All Right Reserved</p>
+    </footer>
+</body>
+</html>

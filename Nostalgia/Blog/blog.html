@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Blog</title>
+    <link rel="canonical" href="https://nostalgia.blog.vn/">
+</head>
+<body>
+    <!----------------------------Thanh Header---------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div id="menu">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><img src="images/vietnam_icon.png" class="vn-icon"> VIETNAMESE(VN) <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VIETNAMESE(VN)</a>
+                                        <a href="#">ENGLISH(ENG)</a>
+                                        <a href="#">JAPANESE(JP)</a>
+                                        <a href="#">CHINESE(CN)</a>
+                                    </div>
+                                </li>
+                
+                                <li class="dropdown">
+                                    <a href="#"> VND <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VND - Vietnam Dong</a>
+                                        <a href="#">EUR – Euro</a>
+                                        <a href="#">JPY - Japanese Yen</a>
+                                        <a href="#">CNY - Chinese Yuan</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div id="sec-menu">
+                            <ul>
+                                <li><a href="#">ĐĂNG KÝ</a></li>
+                                <li><a href="#">ĐĂNG NHẬP</a></li>
+                                <li><a href="#">GIỎ HÀNG</a></li>
+                                <li><a href="#">THANH TOÁN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------Thanh Site---------------------------->
+    <div id="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="images/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./JavaScript/sticky-site.js"></script>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF">Cart</span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Ethiopia.png" alt="Ethiopia">
+                <div class="content">
+                    <h3><b>Café Ethiopia by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">599.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/DeCaf.jpg" alt="DeCaf">
+                <div class="content">
+                    <h3><b>Café DeCaf by Nos®</b></h3>
+                    <div class="qty">Số lượng: 02</div>
+                    <div class="price">1.799.000₫</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span><i class="far fa-times-circle"></i></span>
+                <img src="images/Rose.jpg" alt="Rose">
+                <div class="content">
+                    <h3><b>Café Rosé by Nos®</b></h3>
+                    <div class="qty">Số lượng: 01</div>
+                    <div class="price">399.000₫</div>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <span><b>Tổng:</b></span>
+                <span class="t-price">2.797.000₫</span>
+            </div>
+
+            <div class="total-prices">
+                <span><b>Chiết khấu:</b></span>
+                <span class="t-price">2.500.000₫</span>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-shopping-cart"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-cash-register"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="./JavaScript/shopping-cart.js"></script>
+    <!----------------------------Thanh Breadcrumb---------------------------->
+    <ul id="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+    <!----------------------------Blog---------------------------->
+    <div id="blogs">
+        <div class="blog-left">
+            <div class="blog">
+                <img src="./images/peck.jpg">
+
+                <div class="blog-sum">
+                    <div class="blog-title">
+                        <p><b><a href="#" class="h3-title">BUENA VIDA, HÀNH TRÌNH VỀ XỨ SỞ FAIRY TALE Ở POTSDAM</a></b></p>
+
+                        <p class="posted-by">Được đăng bởi: Jule Nguyễn</p>
+                    </div>
+
+                    <div class="blog-trivia">
+                        <p>Potsdam là một thị trấn quyến rũ và đẹp như tranh vẽ, chỉ cách thành phố Berlin nhộn nhịp khoảng 30 phút ngồi tàu S Bahn. Được biết đến với kiến trúc tuyệt đẹp, lịch sử phong phú và không gian xanh mướt, Potsdam là điểm đến không thể bỏ qua cho bất kỳ ai […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-line">
+                <div class="image">
+                    <img src="./images/LetCoff.jpg" class="image-blog">
+                </div>
+
+                <div class="sum">
+                    <p><b><a href="#" class="h3-title">HÃY ĐỂ CAFÉ KẾT NỐI CHÚNG TA!</a></b></p>
+
+                    <p class="posted-by">Được đăng bởi: Jule Nguyễn</p>
+
+                    <div class="blog-trivia">
+                        <p>Cà phê đã trải qua một chặng đường dài từ khởi đầu khiêm tốn đến trở thành một trong những loại đồ uống được yêu thích và tiêu thụ rộng rãi nhất trên thế giới. Trong suốt lịch sử của mình, cà phê đã trải qua nhiều làn sóng chuyển đổi, mỗi làn sóng được […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-line">
+                <div class="image">
+                    <img src="./images/Sed.jpg" class="image-blog">
+                </div>
+
+                <div class="sum">
+                    <p><b><a href="#" class="h3-title">03 QUÁN CÀ PHÊ NÊN THỬ Ở HAMBURG</a></b></p>
+
+                    <p class="posted-by">Được đăng bởi: Nguyễn Huyền</p>
+
+                    <div class="blog-trivia">
+                        <p>Hamburg đã là một phần quan trọng của thế giới cà phê trong nhiều thế kỷ bởi lợi thế cảng biển của mình. Châu Âu, nếu bạn đã biết, thì phần lớn không có nhiều biển, so với Việt Nam thì càng xa vời. Do đó, Hamburg được coi là một trong những địa điểm […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-line">
+                <div class="image">
+                    <img src="./images/Soc.jpg" class="image-blog">
+                </div>
+
+                <div class="sum">
+                    <p><b><a href="#" class="h3-title">NHỮNG MỐC THỜI GIAN QUAN TRỌNG CỦA CÀ PHÊ</a></b></p>
+
+                    <p class="posted-by">Được đăng bởi: Du Nguyễn</p>
+
+                    <div class="blog-trivia">
+                        <p>Thông tin trong bài này mình dịch ra từ cuốn ‘Coffee for Dummies‘, được viết bởi cựu global coffee ambassador của Starbucks. Cà phê đã đóng một vai trò quan trọng trong lịch sử thế giới trong một thời gian dài. Biết được một số cột mốc quan trọng đã giúp mình hiểu được những […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-line">
+                <div class="image">
+                    <img src="./images/Roaster.jpg" class="image-blog">
+                </div>
+
+                <div class="sum">
+                    <p><b><a href="#" class="h3-title">CÁCH BẠN NÂNG CAO TRẢI NGHIỆM Ở QUÁN CÀ PHÊ</a></b></p>
+
+                    <p class="posted-by">Được đăng bởi: Trần Nhiên</p>
+
+                    <div class="blog-trivia">
+                        <p>Cà phê đã trải qua một chặng đường dài từ khởi đầu khiêm tốn đến trở thành một trong những loại đồ uống được yêu thích và tiêu thụ rộng rãi nhất trên thế giới. Trong suốt lịch sử của mình, cà phê đã trải qua nhiều làn sóng chuyển đổi, mỗi làn sóng được […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-line">
+                <div class="image">
+                    <img src="./images/Rwana.jpg" class="image-blog">
+                </div>
+
+                <div class="sum">
+                    <p><b><a href="#" class="h3-title">RWANDA COFFEE, NHỮNG ĐIỀU BẠN NÊN BIẾT</a></b></p>
+
+                    <p class="posted-by">Được đăng bởi: Trần Nhiên</p>
+
+                    <div class="blog-trivia">
+                        <p>Người ta vẫn thường nói, đằng sau mỗi hạt cà phê là một câu truyện. Nhưng câu truyện ấy không phải lúc nào cũng thi vị mà đôi lúc nó cũng nhiều biến cố, gian truân để rồi kết thúc đầy tình người như cổ tích. Nếu để kể về cà phê Rwanda, một vùng đất được mệnh danh là “the land of a thousand hills” […]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="older-posts">
+                <a href="#" class="older-post">OLDER POSTS</a>
+            </div>
+        </div>
+
+        <div class="blog-right">
+            <div><h3>LIST NHẠC TIÊU BIỂU CỦA TUẦN!</h3></div>
+
+            <p class="posted-by"><i>Có lẽ bạn cần chút giai điệu khi đọc blog chúng tôi?</i></p>
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1742229219%3Fsecret_token%3Ds-Jec3LU7VHdo&color=%23ae8f1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kh-nh-huy-n-nguy-n-533856199" title="Khánh Huyền Nguyễn" target="_blank" style="color: #cccccc; text-decoration: none;">Khánh Huyền Nguyễn</a> · <a href="https://soundcloud.com/kh-nh-huy-n-nguy-n-533856199/sets/music-for-soul/s-Jec3LU7VHdo" title="Music For Soul" target="_blank" style="color: #cccccc; text-decoration: none;">Music For Soul</a></div>
+        
+            <div class="search-blogs">
+                <div class="search-blog">
+                    <h4>SEARCH</h4>
+
+                    <input type="text" placeholder="tìm kiếm" class="search-box">
+
+                    <div class="search-tool">
+                        <a href="#">Tìm kiếm</a>
+                    </div>
+
+                    <h4>SOCIAL</h4>
+
+                    <div class="socials">
+                        <div class="social"><a href="#"><i class="fab fa-facebook"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-pinterest"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                        <div class="social"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                    </div>
+                </div>
+
+                <div class="search-blog">
+                    <h4>CATEGORIES</h4>
+
+                    <div class="categories">
+                        <div class="category"><a href="#">Tản văn</a></div>
+                        <div class="category"><a href="#">Giới thiệu công thức Café</a></div>
+                        <div class="category"><a href="#">Series Nostalgia</a></div>
+                        <div class="category"><a href="#">Câu chuyện về Café</a></div>
+                        <div class="category"><a href="#">Cảm hứng</a></div>
+                    </div>
+
+                    <div class="sees-more">
+                        <a href="#" class="see-more">Xem thêm <span><i class="fas fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Footer---------------------------->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img class="brands-logo" src="./images/logo.png">
+                <img class="brands" src="./images/logo-white.png">
+                
+                <p style="text-align: justify; margin-top: 20px;">Chân thành cảm ơn bạn đã ghé thăm trang web của quán cafe Nostalgia. Chúng tôi rất vui mừng được chia sẻ không gian ấm áp và hương vị đặc biệt cùng bạn!</p> 
+            </div>
+
+            <div class="col"  style="margin-left: 50px;">
+                <h3>Official <div class="underline"><span></span></div></h3>
+                <p>Số 10 Nguyễn Công Hoan, Lê Lợi, TP Hưng Yên, Tỉnh Hưng Yên</p>
+                <p>Hưng Yên, PIN 160000, Việt Nam</p>
+                <p class="email-id">online.nostalgiavn@gmail.com</p>
+                <h5 style="font-size: 18px;">+89 - 9 1337 7629</h5>
+            </div>
+
+            <div class="col" style="margin-left: 50px;">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="ul-chan">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dịch vụ</a></li>
+                    <li><a href="">Về Nostalgia</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col" style="margin-left: -20px;">
+                <h3 style="margin-bottom: 30px;">Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Điền email của bạn">
+                    <button type="submit"><i class="fas fa-feather-alt"></i></button>
+                </form>
+
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-chan">
+        <p class="copyright">NOSTALGIA © Since 2003 - All Right Reserved</p>
+    </footer>
+</body>
+</html>

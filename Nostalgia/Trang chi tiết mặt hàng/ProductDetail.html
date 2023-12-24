@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ProductDetail.css">
+    <link rel="shortcut icon" href="Image/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <title>Caffè Latte</title>
+    <link rel="canonical" href="https://nostalgia.vn/">
+</head>
+<body>
+    <!----------------------------Thanh Site---------------------------->
+    <div id="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="Image/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="Image/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF"></span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <div class="content">
+                    <h3><b>Oops, có vẻ chưa có hàng trong giỏ rồi</b></h3>
+                    <div><a href="#" class="qty">Quay lại trang chủ để mua sắm?</a></div>
+                </div>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-home"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-user"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="./JavaScript/shopping-cart.js"></script>
+
+
+    <!----------------------------Thanh Breadcrumb---------------------------->
+    <ul id="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Latte</a></li>
+        <li>LATTE: NITRO LATTE BY NOSTALGIA®</li>
+    </ul>
+
+    <script src="./JavaScript/sticky-site.js"></script>
+
+    <!----------------------------Product---------------------------->
+    <div id="product">
+        <div class="product-img">
+            <img src="Image/CaffeLatte.png" class="latte">
+        </div>
+        
+        <div class="product-name">
+            <h1>NITRO LATTE</h1>
+
+            <div class="calo">
+                <h5>120calories</h5> 
+
+                <button type="button" class="nitro" data-toggle="tooltip" data-placement="top" title="Thông tin được dựa theo công thức tiêu chuẩn của chúng tôi và không ảnh hưởng tới các thông số tùy chỉnh ở các mức khác">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./JavaScript/tooltip.js"></script>
+    
+    <!----------------------------Product Details---------------------------->
+    <div id="product-details">
+        <div class="size-option">
+            <div class="op-h2">
+                <h2>Lựa chọn Size cốc</h2>
+            </div>
+
+            <select id="option" name="Các loại mức độ" class="op-select">
+                <option value="short">Short (8 fl oz)</option>
+                <option value="low">Tall (12 fl oz)</option>
+                <option value="medium">Grande (16 fl oz)</option>
+                <option value="high">Venti (24 fl oz)</option>
+            </select>
+
+            <div class="price-amount">
+                <p><b>Giá tiền: <span>79.000₫</span></b></p>
+            </div>
+
+            <div class="order-btn">
+                <a href="#" class="o-btn">Đặt mua ngay!</a>
+            </div>
+        </div>
+
+        <div class="mix-product">
+            <div class="mix-h2">
+                <h2>Về Nitro Latte của Nostalgia</h2>
+            </div>
+
+            <div class="nitro-latte-cnt">
+                <p>Một sự kết hợp thú vị giữa những hạt Café của Nostalgia và sữa. Giúp bạn có cảm giác tuyệt vời và ngọt ngào cho một ngày mới!</p>
+            </div>
+
+            <div class="ingridient">
+                <p><i>Mức độ ngọt bạn muốn cho là:</i></p>
+
+                <select id="option" name="Mức độ ngọt" class="sweet">
+                    <option value="short">30% ngọt</option>
+                    <option value="low">60% ngọt</option>
+                    <option value="medium">90% ngọt</option>
+                    <option value="high">100% ngọt</option>
+                </select>
+
+                <p><i>Mức độ đá muốn cho là:</i></p>
+
+                <select id="option" name="Mức độ ngọt" class="ice">
+                    <option value="short">30% đá</option>
+                    <option value="low">60% đá</option>
+                    <option value="medium">90% đá</option>
+                    <option value="high">100% đá</option>
+                </select>
+
+                <div class="m-wand">
+                    <a href="#" class="magic-wand"><i class="fas fa-magic"></i> Tạo nên phép thuật với công thức bạn chọn!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Footer---------------------------->
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img class="brands-logo" src="./Image/logo.png">
+                <img class="brands" src="./Image/logo-white.png">
+                
+                <p style="text-align: justify; margin-top: 20px;">Chân thành cảm ơn bạn đã ghé thăm trang web của quán cafe Nostalgia. Chúng tôi rất vui mừng được chia sẻ không gian ấm áp và hương vị đặc biệt cùng bạn!</p> 
+            </div>
+
+            <div class="col"  style="margin-left: 50px;">
+                <h3>Official <div class="underline"><span></span></div></h3>
+                <p>Số 10 Nguyễn Công Hoan, Lê Lợi, TP Hưng Yên, Tỉnh Hưng Yên</p>
+                <p>Hưng Yên, PIN 160000, Việt Nam</p>
+                <p class="email-id">online.nostalgiavn@gmail.com</p>
+                <h5 style="font-size: 18px;">+89 - 9 1337 7629</h5>
+            </div>
+
+            <div class="col" style="margin-left: 50px;">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="ul-chan">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dịch vụ</a></li>
+                    <li><a href="">Về Nostalgia</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="col" style="margin-left: -20px;">
+                <h3 style="margin-bottom: 30px;">Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Điền email của bạn">
+                    <button type="submit"><i class="fas fa-feather-alt"></i></button>
+                </form>
+
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-chan">
+        <p class="copyright">NOSTALGIA © Since 2003 - All Right Reserved</p>
+    </footer>
+</body>
+</html>

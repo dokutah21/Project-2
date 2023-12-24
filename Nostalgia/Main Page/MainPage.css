@@ -1760,10 +1760,11 @@ table {
 #blog
 {
     width: 100%;
-    height: 130px;
-    padding-top: 50px;
+    height: 160px;
+    padding-top: 100px;
     padding-left: 240px;
     padding-right: 100px;
+    padding-bottom: 20px;
 }
 
 .blog-container
@@ -1807,9 +1808,10 @@ table {
 
 /*===================Wrapper===================*/
 #bai-viet-moi{
-    height: 550px;
-    padding-top: 20px;
+    height: 600px;
+    padding-top: 70px;
     padding-bottom: 20px;
+
 }
 
 .row-col{width: 330px;}
@@ -1862,6 +1864,7 @@ footer
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
+    padding-top: 50px;
 }
 
 footer .brands-logo

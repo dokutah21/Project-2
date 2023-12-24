@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/AdminPage.css">
+    <link rel="shortcut icon" href="Images/logo.png" type="image/png"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>Nostalgia Admin</title>
+    <link rel="canonical" href="https://nostalgia.vn/">
+</head>
+<body>
+    <!----------------------------NAVBAR--------------------------->
+    <nav>
+        <div class="container">
+            <img src="./Images/nostalgia.png" class="logo">
+            <div class="search-bar">
+                <i class="material-icons">search</i>
+                <input type="search" placeholder="tìm kiếm">
+            </div>
+
+            <div class="profile-area">
+                <div class="noti">
+                    <i class="material-icons">notifications</i>
+                </div>
+
+                <div class="message">
+                    <i class="material-icons">mail</i>
+                </div>
+                
+                <div class="theme-btn">
+                    <i class="material-icons active">light_mode</i>
+                    <i class="material-icons" onclick="myFunction()">dark_mode</i>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="./Images/ProfileImage.png">
+                    </div>
+
+                    <h5>Nguyễn Huyền</h5>
+                    <i class="material-icons">expand_more</i>
+                </div>
+
+                <button id="menu-btn">
+                    <i class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!----------------------------ASIDE--------------------------->
+    <main>
+        <aside>
+            <button id="close-btn">
+                <i class="material-icons">close</i>
+            </button>
+
+            <div class="sidebar">
+                <a href="#">
+                    <i class="material-icons">dashboard</i>
+                    <h4>Thanh điều hướng</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">assignment_ind</i>
+                    <h4>Người dùng</h4>
+                </a>
+
+                <a href="#" class="active">
+                    <i class="material-icons">query_stats</i>
+                    <h4>Thị trường</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">key</i>
+                    <h4>Quản lý</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">history</i>
+                    <h4>Lịch sử</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">message</i>
+                    <h4>Tin nhắn</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">help_center</i>
+                    <h4>Trung tâm trợ giúp</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">settings</i>
+                    <h4>Cài đặt</h4>
+                </a>
+            </div>
+
+            <div class="log-out">
+                <a href="#">
+                    <i class="material-icons">logout</i>
+                    <h4>Đăng xuất</h4>
+                </a>
+            </div>
+        </aside>
+
+        <section class="middle">
+            <div class="cards">
+                <div class="card">
+                    <div class="top">
+                        <div class="left">
+                            <h4>Weekly Sales</h4>
+                        </div>
+                    </div>
+
+                    <div class="middle">
+                        <h2>$3074,19</h2>
+
+                        <div class="chart">
+                            <div class="column-one">
+                                <div class="monday">
+                                    <span class="tooltiptext">Thứ hai: +$578,90</span>
+                                </div>
+                            </div>
+
+                            <div class="column-two">
+                                <div class="tuesday">
+                                    <span class="tooltiptext">Thứ ba: +$608,30</span>
+                                </div>
+                            </div>
+
+                            <div class="column-three">
+                                <div class="wednesday">
+                                    <span class="tooltiptext">Thứ tư: +$578,10</span>
+                                </div>
+                            </div>
+
+                            <div class="column-four">
+                                <div class="thursday">
+                                    <span class="tooltiptext">Thứ năm: +$458,90</span>
+                                </div>
+                            </div>
+
+                            <div class="column-five">
+                                <div class="friday">
+                                    <span class="tooltiptext">Thứ sáu: +$678,90</span>
+                                </div>
+                            </div>
+
+                            <div class="column-six">
+                                <div class="saturday">
+                                    <span class="tooltiptext">Thứ bảy: +$478,90</span>
+                                </div>
+                            </div>
+
+                            <div class="column-seven">
+                                <div class="sunday">
+                                    <span class="tooltiptext">Chủ nhật: +$780,90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="plus">
+                            <h5>+6.9%</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inside">
+                        <div class="upper-top">
+                            <div class="top">
+                                <div class="left">
+                                    <h4>Total Order</h4>
+                                </div>
+                            </div>
+        
+                            <div class="middle">
+                                <h2>584.9K</h2>
+                            </div>
+        
+                            <div class="bottom">
+                                <div class="trends">
+                                    <h5><i class="material-icons">trending_up</i>15.9%</h5>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="chart">
+                            <div id="myChart"style="width: 150px; height:100px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="monthly-report">
+                <div class="report">
+                    <h3>Thu nhập</h3>
+                    <div>
+                        <details>
+                            <h1>$310,023</h1>
+                            <h6 class="success">+6.7%</h6>
+                        </details>
+
+                        <p class="text-muted">So sánh với $274,934 của tuần trước</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Chi phí</h3>
+                    <div>
+                        <details>
+                            <h1>$234,587</h1>
+                            <h6 class="successs">-3.6%</h6>
+                        </details>
+
+                        <p class="text-muted">So sánh với $394,002 của tuần trước</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Hoàn tiền</h3>
+                    <div>
+                        <details>
+                            <h1>$456,789</h1>
+                            <h6 class="success">+8.9%</h6>
+                        </details>
+
+                        <p class="text-muted">So sánh với $354,674 của tuần trước</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Doanh số</h3>
+                    <div>
+                        <details>
+                            <h1>$670,973</h1>
+                            <h6 class="success">+5.7%</h6>
+                        </details>
+
+                        <p class="text-muted">So sánh với $650,934 của tuần trước</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fast-payment">
+                <h3>Thanh toán nhanh</h3>
+
+                <div class="badges">
+                    <div class="badge">
+                        <i class="material-icons">add</i>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-primary"  style="background-color: #9A7D36;"></span>
+                        <div>
+                            <h5>Hạt Café</h5>
+                            <h4>$771</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-success"></span>
+                        <div>
+                            <h5>Bìa đóng gói</h5>
+                            <h4>$327</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-primary" style="background-color: #154734;"></span>
+                        <div>
+                            <h5>Đồ tặng kèm</h5>
+                            <h4>$1000</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-success"  style="background-color: #D3CBC8"></span>
+                        <div>
+                            <h5>Nhân công</h5>
+                            <h4>$2510</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-primary" style="background-color: #8F979D;"></span>
+                        <div>
+                            <h5>Training</h5>
+                            <h4>$2929</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-success" style="background-color: #0C3C52;"></span>
+                        <div>
+                            <h5>Quỹ duy trì</h5>
+                            <h4>$7250</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-success" style="background-color: #C7D8DD;"></span>
+                        <div>
+                            <h5>Quảng cáo</h5>
+                            <h4>$810</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-primary" style="background-color: #9A7D36;"></span>
+                        <div>
+                            <h5>Dụng cụ pha chế</h5>
+                            <h4>$900</h4>
+                        </div>
+                    </div>
+
+                    <div class="badge">
+                        <span class="bg-primary"></span>
+                        <div>
+                            <h5>Phí hội viên</h5>
+                            <h4>$6250</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="charto"></canvas>
+            
+        </section>
+
+        <section class="right">
+            <div class="investments">
+                <div class="header">
+                    <h2>Đầu tư</h2>
+                    <a href="#">More <i class="material-icons">chevron_right</i></a>
+                </div>
+
+                <div class="investment">
+                    <img src="./Images/Starbucks.png">
+                    <h4>Starbucks</h4>
+                    <div class="date-time">
+                        <p>7 Nov. 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+
+                    <div class="amount">
+                        <h4>$198,033</h4>
+                        <div class="danger">-4,27%</div>
+                    </div>
+                </div>
+
+                <div class="investment">
+                    <img src="./Images/Highlands.png">
+                    <h4>Starbucks</h4>
+                    <div class="date-time">
+                        <p>7 Nov. 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+
+                    <div class="amount">
+                        <h4>$2198,033</h4>
+                        <div class="success">+14,27%</div>
+                    </div>
+                </div>
+
+                <div class="investment">
+                    <img src="./Images/Trung Nguyên.png">
+                    <h4>Starbucks</h4>
+                    <div class="date-time">
+                        <p>7 Nov. 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+
+                    <div class="amount">
+                        <h4>$1145,674</h4>
+                        <div class="success">+5,27%</div>
+                    </div>
+                </div>
+
+                <div class="investment">
+                    <img src="./Images/Nescafe.png">
+                    <h4>Starbucks</h4>
+                    <div class="date-time">
+                        <p>7 Nov. 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+
+                    <div class="amount">
+                        <h4>$723,903</h4>
+                        <div class="success">+10,27%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <div class="header">
+                    <h2>Giao dịch gần đây</h2>
+                    <a href="#">More <i class="material-icons">chevron_right</i></a>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-purple-light">
+                            <i class="material-icons gold">coffee_maker</i>
+                        </div>
+
+                        <div class="details">
+                            <h4>Café bán ra</h4>
+                            <p>12.12.2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-details">
+                        <div class="card bg-danger">
+                            <img src="./Images/visa.png">
+                        </div>
+
+                        <div class="details">
+                            *2757
+                        </div>
+                    </div>
+                    <h4>$5600</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-purple-light">
+                            <i class="material-icons gold">storefront</i>
+                        </div>
+
+                        <div class="details">
+                            <h4>Thu nhập chi nhánh</h4>
+                            <p>12.12.2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-details">
+                        <div class="card bg-danger">
+                            <img src="./Images/visa.png">
+                        </div>
+
+                        <div class="details">
+                            *3757
+                        </div>
+                    </div>
+                    <h4>$27800</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-purple-light">
+                            <i class="material-icons gold">menu_book</i>
+                        </div>
+
+                        <div class="details">
+                            <h4>Xuất khẩu</h4>
+                            <p>12.12.2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-details">
+                        <div class="card bg-danger">
+                            <img src="./Images/visa.png">
+                        </div>
+
+                        <div class="details">
+                            *54780
+                        </div>
+                    </div>
+                    <h4>$472820</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-purple-light">
+                            <i class="material-icons gold">dining</i>
+                        </div>
+
+                        <div class="details">
+                            <h4>Món phụ</h4>
+                            <p>12.12.2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-details">
+                        <div class="card bg-danger">
+                            <img src="./Images/visa.png">
+                        </div>
+
+                        <div class="details">
+                            *1757
+                        </div>
+                    </div>
+                    <h4>$8900</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="./JavaScript/AdminPage.js"></script>
+    <script src="./JavaScript/Pie.js"></script>
+    <script src="./JavaScript/light-dark.js"></script>
+</body>
+</html>

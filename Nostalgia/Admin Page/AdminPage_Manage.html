@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/AdminPage_Manage.css">
+    <link rel="shortcut icon" href="Images/logo.png" type="image/png"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>Nostalgia Admin</title>
+    <link rel="canonical" href="https://nostalgia.vn/">
+</head>
+<body>
+    <!----------------------------NAVBAR--------------------------->
+    <nav>
+        <div class="container">
+            <img src="./Images/nostalgia.png" class="logo">
+            <div class="search-bar">
+                <i class="material-icons">search</i>
+                <input type="search" placeholder="tìm kiếm">
+            </div>
+
+            <div class="profile-area">
+                <div class="noti">
+                    <i class="material-icons">notifications</i>
+                </div>
+
+                <div class="message">
+                    <i class="material-icons">mail</i>
+                </div>
+                
+                <div class="theme-btn">
+                    <i class="material-icons active">light_mode</i>
+                    <i class="material-icons" onclick="myFunction()">dark_mode</i>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="./Images/ProfileImage.png">
+                    </div>
+
+                    <h5>Nguyễn Huyền</h5>
+                    <i class="material-icons">expand_more</i>
+                </div>
+
+                <button id="menu-btn">
+                    <i class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!----------------------------ASIDE--------------------------->
+    <main>
+        <aside>
+            <button id="close-btn">
+                <i class="material-icons">close</i>
+            </button>
+
+            <div class="sidebar">
+                <a href="#">
+                    <i class="material-icons">dashboard</i>
+                    <h4>Thanh điều hướng</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">assignment_ind</i>
+                    <h4>Người dùng</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">query_stats</i>
+                    <h4>Thị trường</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">key</i>
+                    <h4>Quản lý</h4>
+                </a>
+
+                <a href="#" class="active sub-active">
+                    <i class="material-icons">local_cafe</i>
+                    <h4>Quản lý hạt café</h4>
+                </a>
+
+                <a href="#" class="sub-active">
+                    <i class="material-icons">newspaper</i>
+                    <h4>Quản lý bài viết</h4>
+                </a>
+
+                <a href="#" class="sub-active">
+                    <i class="material-icons">album</i>
+                    <h4>Quản lý café</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">history</i>
+                    <h4>Lịch sử</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">message</i>
+                    <h4>Tin nhắn</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">help_center</i>
+                    <h4>Trung tâm trợ giúp</h4>
+                </a>
+
+                <a href="#">
+                    <i class="material-icons">settings</i>
+                    <h4>Cài đặt</h4>
+                </a>
+            </div>
+
+            <div class="log-out">
+                <a href="#">
+                    <i class="material-icons">logout</i>
+                    <h4>Đăng xuất</h4>
+                </a>
+            </div>
+        </aside>
+
+        <section class="middle">
+            <div class="add-news">
+                <div class="qlhc">
+                    <h2>QUẢN LÝ HẠT CAFÉ</h2>
+                </div>
+
+                <div class="add-new">
+                    <p style="margin-right: 30px;">Tên Café:</p>
+
+                    <input type="text" class="cafes-name">
+                </div>
+
+                <div class="cla">
+                    <div class="add-new">
+                        <p>Loại được bán:</p>
+    
+                        <input type="text" class="cafe-name">
+                    </div>
+    
+                    <div class="add-new">
+                        <p>Loại hạt được bán:</p>
+    
+                        <input type="text" class="cafe-name">
+                    </div>
+                </div>
+
+                <div class="cla">
+                    <div class="add-new">
+                        <p style="margin-right: 43px;">Giá tiền:</p>
+    
+                        <input type="text" class="cafe-name">
+                    </div>
+    
+                    <div class="add-new">
+                        <p style="margin-right: 36px;">Chú thích vị:</p>
+    
+                        <input type="text" class="cafe-name">
+                    </div>
+                </div>
+
+                <div class="add-new" style="margin-bottom: 30px;">
+                    <p style="margin-right: 30px;">Nội dung:</p>
+
+                    <input type="text" class="cafes-names">
+                </div>
+
+                <div class="btn">
+                    <a class="xoa" href="#">Thêm mới</a>
+                </div>
+            </div>
+
+            <div id="cart">
+                <table border="1">
+                    <tr style="border-bottom: 3px solid #1D1D1D;">
+                        <th style="padding: 10px; text-align: center;">Xóa</th>
+                        <th style="padding: 10px; text-align: center;">Tên Café</th>
+                        <th style="padding: 10px; text-align: center;">Loại được bán</th>
+                        <th style="padding: 10px; text-align: center;">Loại hạt được bán</th>
+                        <th style="padding: 10px; text-align: center;">Giá tiền</th>
+                        <th style="padding: 10px; text-align: center;">Chú thích vị</th>
+                        <th style="padding: 10px; text-align: center;">Nội dung</th>
+                    </tr>
+        
+                    <tr>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">X</a></td>
+                        <td style="padding: 10px; text-align: center; width: 150px; height: 150px;">Café Ethiopia by Nos®</td>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Blonde</a></td>
+                        <td style="padding: 10px; text-align: center;">Whole Bean</td>
+                        <td style="padding: 10px; text-align: center;">599.000₫</td>
+                        <td style="padding: 10px; text-align: center;">Ngọt dịu & Nhẹ nhàng</td>
+                        <td style="padding: 10px; text-align: center;">N/A</td>
+                    </tr>
+        
+                    <tr>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">X</a></td>
+                        <td style="padding: 10px; text-align: center; width: 150px; height: 150px;">Café Ethiopia by Nos®</td>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Blonde</a></td>
+                        <td style="padding: 10px; text-align: center;">Whole Bean</td>
+                        <td style="padding: 10px; text-align: center;">599.000₫</td>
+                        <td style="padding: 10px; text-align: center;">Ngọt dịu & Nhẹ nhàng</td>
+                        <td style="padding: 10px; text-align: center;">N/A</td>
+                    </tr>
+        
+                    <tr>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">X</a></td>
+                        <td style="padding: 10px; text-align: center; width: 150px; height: 150px;">Café Ethiopia by Nos®</td>
+                        <td style="padding: 10px; text-align: center;"><a href="#" class="fix-a">Blonde</a></td>
+                        <td style="padding: 10px; text-align: center;">Whole Bean</td>
+                        <td style="padding: 10px; text-align: center;">599.000₫</td>
+                        <td style="padding: 10px; text-align: center;">Ngọt dịu & Nhẹ nhàng</td>
+                        <td style="padding: 10px; text-align: center;">N/A</td>
+                    </tr>
+        
+                    <tr>
+                        <td style="padding: 30px; text-align: right;" colspan="7"><a href="#" class="update-cart">Cập nhật</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="./JavaScript/light-dark.js"></script>
+</body>
+</html>

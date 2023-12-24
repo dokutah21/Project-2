@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LoginPage.css">
+    <link rel="shortcut icon" href="Image/logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Nostalgia - Login</title>
+    <link rel="canonical" href="https://nostalgia.login.vn/">
+</head>
+<body>
+    <!----------------------------Thanh Header---------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div id="menu">
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><img src="Image/vietnam_icon.png" class="vn-icon"> VIETNAMESE(VN) <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VIETNAMESE(VN)</a>
+                                        <a href="#">ENGLISH(ENG)</a>
+                                        <a href="#">JAPANESE(JP)</a>
+                                        <a href="#">CHINESE(CN)</a>
+                                    </div>
+                                </li>
+                
+                                <li class="dropdown">
+                                    <a href="#"> VND <i class="fas fa-chevron-down"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">VND - Vietnam Dong</a>
+                                        <a href="#">EUR – Euro</a>
+                                        <a href="#">JPY - Japanese Yen</a>
+                                        <a href="#">CNY - Chinese Yuan</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div id="sec-menu">
+                            <ul>
+                                <li><a href="#">ĐĂNG KÝ</a></li>
+                                <li><a href="#">ĐĂNG NHẬP</a></li>
+                                <li><a href="#">GIỎ HÀNG</a></li>
+                                <li><a href="#">THANH TOÁN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------Thanh Site---------------------------->
+    <div id="site">
+        <table>
+            <tr>
+                <td class="logos" >
+                    <a class="logo" href="#">
+                        <img src="Image/logo.png" alt="Cửa hàng café Nostalgia" />
+                    </a>
+
+                    <a class="brand_name" href="#">
+                        <img src="Image/nostalgia.png" alt="nostalgia">
+                    </a>
+                </td>
+
+                <td class="blank-space"></td>
+
+                <td class="search-fix">
+                    <input class="search" type="text" placeholder="Tìm kiếm..." />
+                    <button type="button" class="button"><i class="fas fa-search"></i></button>
+                </td>
+
+                <td class="shopping-cart">
+                    <a><span onclick="openNav()"><i class="fas fa-shopping-cart"></i></span></a>
+                    <a><i class="far fa-bookmark"></i></a>
+                    <a><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-map-marker-alt"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="closed">
+            <div class="cart"><span style="color: #FFFFFF"></span></div>
+            <div class="fickbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a></div>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <div class="content">
+                    <h3><b>Oops, có vẻ chưa có hàng trong giỏ rồi</b></h3>
+                    <div><a href="#" class="qty">Quay lại trang chủ để mua sắm?</a></div>
+                </div>
+            </div>
+
+            <a href="#" class="button-total"><i class="fas fa-home"></i></a>
+
+            <a href="#" class="button-totaly"><i class="fas fa-user"></i></a>
+        </div>
+
+        <div class="none"></div>
+        
+    </div>
+    <script src="./JavaScript/shopping-cart.js"></script>
+
+    <!----------------------------Login---------------------------->
+    
+    <div class="login-page">
+        <div class="login">
+            <img src="./Image/nostalgia.png">
+
+            <div class="log">
+                <div class="email">
+                    <h6>Email/Username <span>*</span></h6>
+                    <input type="text" placeholder="email/username" class="eml-inp">
+                </div>
+
+                <div class="password">
+                    <h6>Password <span>*</span></h6>
+                    <input type="text" placeholder="password" class="eml-inp">
+                </div>
+
+                <div class="lost-pw">
+                    <p><a href="#" class="forgot">Quên mật khẩu của bạn?</a></p>
+                    
+                    <div class="check">
+                        <input type="checkbox">
+                        <p>Luôn lưu mật khẩu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buts">
+                <a href="#" class="button-s">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------------------No Account---------------------------->
+    <div class="no-account">
+        <div class="title">
+            <h2>Không có tài khoản?</h2>
+        </div>
+
+        <div class="create-button">
+            <a href="#">Hãy tạo tài khoản của bạn!</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,772 @@
+/*===================Page Setting===================*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{font-size: 13px;}
+
+body{
+    background: #F0EFF5;
+    font-family: poppins, sans-serif;
+    color: #27282F;
+}
+
+img{width: 100%}
+
+h1{font-size: 35px;}
+
+h2{font-size: 24px;}
+
+h3{font-size: 19px;}
+
+h4{font-size: 14px;}
+
+h5{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+h6{font-size: 11px;}
+
+p{
+    font-size: 14px;
+    color: #56555E;
+}
+
+small
+{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+:root
+{
+    --color-white: #FFFFFF;
+    --color-light: #F0EFF5;
+    --color-dark: #86848C;
+    --color-gray-dark: #56555E;
+}
+
+.text-muted{color:#86848C}
+
+.primary{color:rgb(71, 7, 234)}
+
+.success{color:rgb(34, 202, 75)}
+
+.danger{color:rgb(255, 67, 54)}
+
+.warning{color:rgb(234, 181, 7)}
+
+.purple{color:rgb(160, 99, 245)}
+
+.gold{color: rgb(154, 125, 54);}
+
+
+.bg-primary{
+    background:rgb(71, 7, 234);
+    box-shadow: 0 13px 13px rgba(71, 7, 234, 0.2);
+}
+
+.bg-success{
+    background:rgb(34, 202, 75);
+    box-shadow: 0 13px 13px rgba(34, 202, 75, 0.2);
+}
+
+.bg-danger{
+    background:rgb(255, 67, 54);
+    box-shadow: 0 13px 13px rgba(255, 67, 54, 0.2);
+}
+
+.bg-purple{
+    background:rgb(234, 181, 7);
+    box-shadow: 0 13px 13px rgba(160, 99, 245, 0.2);
+}
+
+.bg-dark
+{
+    background: #27282F;
+    box-shadow: 0 13px 13px rgba(0, 0, 0, 0.2);
+}
+
+.bg-gold
+{
+    background: rgb(154, 125, 54);
+    box-shadow: 0 13px 13px rgba(0, 0, 0, 0.2);
+}
+
+.bg-purple-light{background: rgba(160, 99, 245, 0.2);}
+
+.bg-danger-light{background: rgba(255, 67, 54, 0.2);}
+
+.bg-primary-light{background: rgba(71, 7, 234, 0.2);}
+
+.bg-success-light{background: rgba(34, 202, 75, 0.2);}
+
+.bg-gold-light{background: rgba(0, 0, 0, 0.2);;}
+
+
+.dark-mode 
+{
+    background-color: #23232A;
+    color: #1D1D1D;
+}
+
+.dark-mode:hover
+{
+    color: #1D1D1D;
+}
+
+/*===================Overall Scrollbar===================*/
+::-webkit-scrollbar{width: 0px}
+
+::-webkit-scrollbar-thumb{
+    background: #F1F1F1;
+    border-radius: 10px;
+}
+
+/*===================Navbar===================*/
+nav
+{
+    width: 100%;
+    padding: 16px 0;
+}
+
+nav .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+}
+
+nav img.logo{width: 180px;}
+
+nav .search-bar
+{
+    background: #FFFFFF;
+    padding: 8px 25px;
+    width: 350px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #86848C;
+    position: absolute;
+    left: 23%;
+}
+
+nav .search-bar input[type="search"]
+{
+    color: #27282F;
+    background: transparent;
+    width: 100%;
+}
+
+nav .search-bar input[type="search"]::placeholder{color: #a0a0a0;}
+
+nav .profile-area
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+nav .profile-area .message i
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+nav .profile-area .noti i
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+nav .profile-area .theme-btn
+{
+    display: flex;
+    background: #FFFFFF;
+    width: 80px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav .profile-area .theme-btn i
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+nav .profile-area .theme-btn .active
+{
+    background: #27282F;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+
+nav .profile-area .profile
+{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+nav .profile-area .profile .profile-photo
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav .profile-area button{display: none;}
+
+
+
+/*===================Sidebar===================*/
+main
+{
+    display: grid;
+    grid-template-columns: 240px auto 480px;
+    gap: 32px;
+    width: 96%;
+    margin: 16px auto 64px;
+}
+
+main aside
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 700px;
+}
+
+main aside button#close-btn{display: none;}
+
+main aside .sidebar a
+{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    height: 55px;
+    color: #86848C;
+    position: relative;
+}
+
+main aside .sidebar a i
+{
+    font-size: 23px;
+    margin-left: 35px;
+    transition: all 0.3s ease;
+}
+
+main aside .sidebar a.active
+{
+    background: #FFFFFF;
+    color: #9A7D36;
+}
+
+main aside .sidebar a.active::before
+{
+    content: '';
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    background: #9A7D36;
+}
+
+main aside .sidebar a:hover{color:#9A7D36 ;}
+
+main aside .sidebar a:hover i{margin-left: 32px;}
+
+main aside .sidebar h4{font-weight: 500;}
+
+
+/*===================Logout===================*/
+main aside .log-out
+{
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #1D1D1D;
+}
+
+main aside .log-out a
+{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    height: 55px;
+    color: #1D1D1D;
+    position: relative;
+}
+
+main aside .log-out a i
+{
+    font-size: 23px;
+    margin-left: 35px;
+    transition: all 0.3s ease;
+}
+
+main aside .log-out a:hover{color:#9A7D36 ;}
+
+main aside .log-out a:hover i{margin-right: 32px;}
+
+
+
+/*===================Weekly===================*/
+main section.middle .cards
+{
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+main section.middle .cards .card
+{
+    background: #FFFFFF;
+    padding: 26px; 
+    border-radius: 25px;
+    height: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.1s ease;
+}
+
+main section.middle .cards .card .left h4
+{
+    color: #344050;
+    font-weight: 300;
+}
+
+main section.middle .cards .card .middle
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+main section.middle .cards .card .middle h2
+{
+    padding: 20px 0px 0px 0px;
+    color: #5E6E82;
+    font-weight: 600;
+}
+
+main section.middle .cards .card .plus h5
+{
+    color: #00894F;
+    background-color: #D9F8EB;
+    padding: 3px 5px;
+    border-radius: 16px;
+    width: 15%;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+main section.middle .cards .card .middle .chart
+{
+    display: flex;
+    gap: 15px;
+}
+
+main section.middle .cards .card .middle .chart .column-one
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-one .monday
+    {
+        height: 47.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-two
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-two .tuesday
+    {
+        height: 50.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-three
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-three .wednesday
+    {
+        height: 37.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-four
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-four .thursday
+    {
+        height: 45.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-five
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-five .friday
+    {
+        height: 49.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-six
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-six .saturday
+    {
+        height: 40.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+main section.middle .cards .card .middle .chart .column-seven
+{
+    height: 57.1429px;
+    background: #DBDADA; 
+    width: 5px; 
+    text-align: center;
+    border-radius: 6px;
+}
+
+    main section.middle .cards .card .middle .chart .column-seven .sunday
+    {
+        height: 54.1429px;
+        background: #9A7D36; 
+        width: 5px; 
+        text-align: center;
+        border-radius: 6px;
+    }
+
+.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.monday .tooltiptext, .tuesday .tooltiptext, .wednesday .tooltiptext, .thursday .tooltiptext, .friday .tooltiptext, .saturday .tooltiptext, .sunday .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #27282F;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.monday:hover .tooltiptext, .tuesday:hover .tooltiptext, .wednesday:hover .tooltiptext, .thursday:hover .tooltiptext, .friday:hover .tooltiptext, .saturday:hover .tooltiptext, .sunday:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/*===================Package===================*/
+main section.middle .cards .card .trends h5
+{
+    color: #00894F;
+    background-color: #D9F8EB;
+    padding: 3px 5px;
+    border-radius: 16px;
+    width: 70%;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    gap: 2px;
+    justify-content: space-between;
+}
+
+main section.middle .cards .card .trends i{font-size: 12px;}
+
+main section.middle .cards .card-inside
+{
+    display: flex;
+    gap: 70px;
+}
+
+main section.middle .cards .card .middle-two
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+}
+
+
+/*===================Donut===================*/
+main .monthly-report
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+main .monthly-report .report h1{font-size: 22px;}
+
+main .monthly-report .report .successs{color: #C8102E}
+
+/*===================Fast Payment===================*/
+main .fast-payment
+{
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+main .fast-payment .badges
+{
+    display: flex;
+    gap: 16px;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+main .fast-payment .badge span
+{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+main .fast-payment .badge
+{
+    padding: 8px 25px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+main .fast-payment .badge:hover
+{
+    box-shadow: 0 0 24px #c9c9c9;
+}
+
+main .fast-payment .badge:first-child i
+{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 24px;
+}
+
+main .fast-payment .badge div
+{
+    display: flex;
+    gap: 32px;
+    align-self: center;
+}
+
+/*===================Canvas Charto===================*/
+canvas#charto
+{
+    background-color: #FFFFFF;
+    max-width: 100%;
+    margin-top: 32px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+
+/*===================Invest===================*/
+main section.right .investments
+{
+    background: #FFFFFF;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+main section.right .investments img{width: 40px;}
+
+main section.right .investments .header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px;
+    padding-bottom: 0;
+}
+
+main section.right .investments .header a
+{
+    display: flex;
+    align-items: center;
+    color: rgb(71, 7, 234);
+}
+
+main section.right .investments .investment
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px;
+    border-bottom: 1px solid #F0EFF5;
+    transition: all 0.3s ease;
+}
+
+main section.right .investments .investment:last-child{border: none;}
+
+main section.right .investments .investment:hover{background: #F0EFF5;}
+
+
+/*===================Recent Transaction===================*/
+main .recent-transactions{margin-top: 32px;}
+
+main .recent-transactions img{width: 35px;}
+
+main .recent-transactions .header
+{
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+}
+
+main .recent-transactions .header a
+{
+    display: flex;
+    align-items: center;
+}
+
+main .recent-transactions .transaction
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 26px;
+    border-radius: 26px;
+    transition: all 0.3s ease;
+}
+
+main .recent-transactions .transaction:hover
+{
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+main .recent-transactions .transaction .service
+{
+    display: flex;
+    gap: 16px;
+}
+
+main .recent-transactions .transaction .service .icon
+{
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+main .recent-transactions .card-details
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+main .recent-transactions .card-details .card
+{
+    display: flex;
+    width: 73px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
